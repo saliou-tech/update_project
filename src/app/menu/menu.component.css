@@ -1,0 +1,141 @@
+ .header_top {
+    display: block;
+
+} 
+.color_menu1_2{
+    background-color: #262626;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+.color_menu_3{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e1e8ed;
+    height: 48px;
+}
+.header-categories a, .header-categories a:hover {
+    line-height: 1.2;
+    text-decoration: none;
+}
+.header-categories__main-link, .header-categories__main-link--empty {
+    
+    color: #666666;
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+} 
+ .header-categories__links {
+    font-size: 25px;
+    float: left;
+    list-style: none;
+    padding: 7px 0 0;
+    margin: 0 -10px;
+} 
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px; 
+     line-height: 1.5;
+    color: #545454;
+}
+ .menu_element{
+    color: hsl(0,0%,100%);
+    display: inline-block;
+    padding: 16px;
+    padding-bottom: 12px;
+    
+    text-decoration: none;
+}
+.menu_element2{
+    /* color: hsl(0,0%,100%); */
+    color: #6ba229;
+    display: inline-block;
+    padding: 16px;
+    padding-bottom: 12px;
+    
+    text-decoration: none;
+} */
+.page {
+    height: 100%;
+    position: relative;
+} 
+ .panier{
+    color: hsl(0,0%,100%);
+    display: inline-block;
+    padding: 16px 8px 16px 16px;
+    padding-bottom: 12px;
+    
+    text-decoration: none;
+} 
+ .dpdw .inbox, .flyout-w .flyout:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+}
+.btn, .y-ifm, .s-menu .m-itm, #jm .-pam {
+    padding: 16px;
+ }
+ #jm .-fw {
+    width: 100%;
+} 
+.btn._def, .btn._prim, .btn._sec, .btn._fb {
+    transform: translate3d(0, 0, 0);
+} 
+.btn._def:focus:not(:active)::after, .btn._def::after, .btn._prim::after, .btn._sec::after, .btn._fb::after {
+    transform: scale(10, 10);
+}
+.-fs0 {
+    font-size: 0;
+}
+.-tac {
+    text-align: center;
+}
+.-hr 
+{
+    position: relative;
+}
+
+.-hr-bb {
+    border-bottom: 2px solid #ededed;
+}
+.-r {
+    font-weight: 400;
+}
+.-mbs {
+    margin-bottom: 8px;
+}
+.mtm {
+    margin-top: 16px;
+} 
+ .btn._def, .btn._prim, .btn._sec, .btn._fb {
+    transform: translate3d(0, 0, 0);
+}
+.btn._def{
+padding: 8px;
+position: relative;
+overflow: hidden;
+} 
+.btn._prim { 
+    /* background-color: #f68b1e; */
+    
+ } 
+ .-pas {
+    padding: 8px;
+}
+.-i-ctr {
+    align-items: center;
+}
+.-df {
+    display: flex;
+}
+.-mrm {
+    margin-right: 16px;
+}
+.-fsh0 {
+    flex-shrink: 0;
+}
+.ic {
+    fill: #282828;
+} 
+
+
+
+

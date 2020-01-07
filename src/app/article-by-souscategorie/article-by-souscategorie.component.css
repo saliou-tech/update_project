@@ -1,0 +1,1757 @@
+.div_bar_search_1{
+    position: relative;
+    /* display: -ms-flexbox; */
+    display: flex;
+}
+.Vd9D9{
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 10%);
+    border: 2px solid hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 100%);
+    -webkit-appearance: none;
+    padding: 16px 24px;
+    -ms-flex: 1;
+    flex: 1;
+    height: 56px;
+    
+}
+.sku>.link>.osh-btn {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+
+.osh-btn {
+    text-transform: uppercase;
+    background: #f68b1e;
+    border: 1px solid #f68b1e;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.42857;
+    padding: 5px;
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+button {
+    overflow: visible;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.osh-btn>.additional-content, .osh-btn>.label, .osh-btn>.sub-label, .osh-btn>i {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.42857;
+}
+.milieu{
+    
+}
+
+._2O-ZB {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    box-shadow: 1px 1px 3px 0 hsla(0, 0%, 0%, .07);
+    background-color: #2baacd;
+    color: hsl(0, 0%, 100%);
+    padding: 16px 0;
+    margin-left: -2px;
+    width: 160px;
+}
+.osh-breadcrumb {
+    padding: 10px 0;
+    height: 50px;
+    line-height: 30px;
+}
+.hidden {
+    display: none;
+}
+.osh-breadcrumb>ul>li {
+    display: inline-block;
+    white-space: nowrap;
+    list-style: none;
+}
+.osh-breadcrumb>ul>li.last-child:not(:first-child) {
+    max-width: 280px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.osh-breadcrumb>ul>li {
+    display: inline-block;
+    white-space: nowrap;
+    list-style: none;
+}
+.osh-breadcrumb>ul>li:first-child:before {
+    content: "";
+    padding: 0;
+}
+.osh-breadcrumb>ul>li:before {
+    content: ">";
+    font-size: .8rem;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+
+
+
+/* a revoir */
+
+
+
+
+.color_grid{
+    position: relative;
+    min-height: 140px;
+    display: block;
+}
+ /* .div_bar_search{
+    margin: 0 16px;
+    padding: 32px 0 8px 0;
+} */
+.div_bar_search_1{
+    position: relative;
+    /* display: -ms-flexbox; */
+    display: flex;
+} 
+.page {
+    height: 100%;
+    position: relative;
+}
+.canvas {
+    position: relative;
+}
+.grid-container {
+    max-width: 1004px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page__canvas {
+    box-shadow: 0 0 15px -1px hsl(0, 0%, 40%);
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+}
+.Vd9D9{
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 10%);
+    border: 2px solid hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 100%);
+    -webkit-appearance: none;
+    padding: 16px 24px;
+    -ms-flex: 1;
+    flex: 1;
+    height: 56px;
+}
+._2O-ZB{
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    box-shadow: 1px 1px 3px 0 hsla(0, 0%, 0%, .07);
+    background-color: #6ba229;
+    color: hsl(0, 0%, 100%);
+    padding: 16px 0;
+    margin-left: -2px;
+    width: 160px;
+
+}
+._32DSt {
+    margin-top: 16px;
+}
+._2AqEv, ._3hUzI {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    color: hsl(0, 0%, 20%);
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 16px 8px 0 0;
+    font-size: 14px;
+    color: hsl(0, 0%, 40%);
+    font-weight: 400;
+}
+
+._2nZ4X {
+    max-width: 1408px;
+    margin: 0 auto;
+    padding: 8px 16px 0 16px;
+}
+.body_page {
+    margin: 0 16px;
+    padding: 16px 0 16px 0;
+}
+.selection {
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 2px solid hsl(0, 0%, 90%);
+}
+._2YVIw{
+    display: flex;
+    /* margin: 0 auto 8px 0; */
+}
+@media (max-width: 831px){
+    ._2YVIw {
+        display: -ms-flexbox;
+        display: flex;
+        background-color: hsl(0, 0%, 100%);
+        border: 1px solid hsl(0, 0%, 90%);
+        border-radius: 2px;
+        height: 34px;
+        margin-top: 2px;
+        margin-right: 8px;
+    }
+}
+
+._2sT86 {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+}
+
+.EurVi ._3Oe1A {
+    height: 220px;
+    width: auto;
+    /* margin: 24px 16px 0; */
+    /* -ms-flex-direction: row; */
+    flex-direction: row;
+}
+.ZLSF6 {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    background-color: transparent;
+    border: none;
+    padding: 8px 8px 8px 0;
+    color: hsl(0, 0%, 40%);
+    box-shadow: none;
+    display: -ms-flexbox;
+    display: flex;
+    width: 160px;
+}
+@media (min-width: 832px){
+    ._3riWF {
+    }
+}
+
+
+._3wJqg {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    color: hsl(0, 0%, 20%);
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-weight: 600;
+}
+._3VkCv {
+    display: none;
+}
+._32VAW{
+    
+    /* display: flex; */
+    justify-content: flex-end;
+    /* padding: 2px 0;
+    order: 3; */
+}
+._32VAW {
+    display: -ms-flexbox; 
+    display: flex; 
+    -ms-flex-pack: end;
+    justify-content: flex-end; 
+    padding: 2px 0
+  }
+  
+  /* @media (min-width: 832px) {
+  
+    ._32VAW {
+      -ms-flex-order: 3;
+          order: 3;
+          min-width: 530px;;
+    }
+    } */
+
+._20J4V {
+    
+    display: inline-flex;
+    
+    align-self: baseline;
+    
+    align-self: baseline;
+}
+
+.cUuZI{
+    
+    display: inline-flex;
+    
+    align-self: baseline;
+}
+
+._1UmTF {
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    border-left: 1px solid hsl(0, 0%, 90%);
+
+
+
+}
+.search-facet-layout-switcher {
+    display: inline-block;
+    height: 100%;
+}
+.btn-search-switch.is-active {
+    background-color: transparent;
+    color: hsl(0, 0%, 30%);
+    text-decoration: none;
+    outline: none;
+}
+
+.btn-search-switch {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: hsl(0, 0%, 70%);
+    border-radius: 0;
+    padding: 5px;
+}
+._1mVg7 {
+    position: relative;
+    display: inline-block;
+    align-self: baseline;
+}
+._3zS3G {
+    display: none;
+}
+._35LYV {
+    font-size: 14px;
+    margin-right: 4px; 
+}
+._2s17p {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 90%);
+    padding: 8px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+._2VZec {
+    display: none;
+    border: 2px solid hsl(0, 0%, 90%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+._1WPp9 {
+    background: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 20%);
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-right: 2px solid hsl(0, 0%, 90%);
+    transition: background .2s, color .2s;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+._2LyRT {
+    color: hsl(0, 0%, 40%);
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    font-size: 12px;
+    margin-right: 24px;
+    -ms-flex-order: 2;
+    order: 2;
+    height: 42px;
+    line-height: 40px;
+}
+
+
+.BNYKr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 2px solid hsl(0, 0%, 90%);
+}
+@media (min-width: 832px){
+    ._2YVIw {
+    
+        display: flex;
+        margin: 0 auto 8px 0;
+    }
+
+}
+@media (min-width: 832px){}
+._3Gfh4 {
+    width: 280px;
+    margin-right: 24px;
+}
+
+
+.TTG-m {
+    
+    display: flex;
+    margin-top: 8px;
+}
+._3Gfh4 {
+    width: 280px;
+    margin-right: 24px;
+}
+.JMiTG {
+    display: block;
+}
+._1o7LM {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding-left: 120px;
+    padding-bottom: 16px;
+    padding-right: 0px;
+    padding-top: 4px;
+    
+}
+._1-BRi {
+    display: none;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+@media (max-width: 831px){
+    ._3riWF {
+    }
+
+}
+@media (max-width: 831px){
+    .ZLSF6 {
+        width: 84px;
+        line-height: 18px;
+        padding: 7px 2px;
+       
+        justify-content: space-evenly;
+    }
+    
+
+}
+
+
+.a{
+    background-color: transparent;
+
+}
+._1loc3 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+._1o7LM {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+}
+._1bTly {
+    
+    display: flex;
+    
+    align-items: baseline;
+}
+.m0T0C {
+    margin-bottom: 24px;
+}
+._61rqe {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    background-color: transparent;
+    border: none;
+    color: hsl(0, 0%, 70%);
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+._1SXRP {
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 32px;
+}
+
+._1SXRP {
+    
+    display: flex;
+    line-height: 32px;
+}
+._1OYwR {
+    font-size: 14px;
+    color: hsl(0, 0%, 20%);
+    text-decoration: none;
+    -ms-flex: 3 0 auto;
+    flex: 3 0 auto;
+}
+.fXC7e, ._2tIrr, ._1HFue {
+    font-weight: 700;
+}
+
+
+
+element.style {
+}
+._1kd89 {
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    
+    flex: 1 0 auto;
+    text-align: right;
+    padding-right: 24px;
+}
+
+._1SXRP {
+    
+    display: flex;
+    line-height: 32px;
+}
+
+
+
+
+element.style {
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+._61rqe {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    background-color: transparent;
+    border: none;
+    color: hsl(0, 0%, 70%);
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+._3eeKY {
+    display: none;
+}
+._1loc3 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+._1o7LM {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+}
+._1bTly {
+    
+    display: flex;
+    
+    align-items: baseline;
+}
+.m0T0C {
+    margin-bottom: 24px;
+}
+
+._47ahp {
+    margin: 0 -16px;
+}
+
+._3kFGv {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 231px;
+}
+._3eeKY {
+    display: none;
+}
+._1HhXF {
+    margin-top: 4px;
+margin-bottom: 16px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: justify;
+justify-content: space-between;
+-ms-flex-align: center;
+align-items: center;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+
+
+._3vvh6 {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 30%);
+    font-weight: 500;
+}
+
+
+._25r2q {
+    
+    display: flex;
+    
+    align-items: center;
+    padding-bottom: 24px;
+}
+._3BYKu {
+    position: relative;
+}
+._1hMyj, ._2zSyE {
+    font-size: 12px;
+    color: hsl(0, 0%, 10%);
+}
+._1hMyj {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+._3yPNI {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 10%);
+    border: 2px solid hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 100%);
+    -webkit-appearance: none;
+    font-size: 12px;
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 8px;
+    padding-left: 16px;
+    width: 104px;
+    height: 32px;
+}
+._3WEcW {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 40%);
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+._61rqe {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px -1px hsl(0, 0%, 90%);
+    background-color: transparent;
+    border: none;
+    color: hsl(0, 0%, 70%);
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+._1HhXF {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+._3vvh6 {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 30%);
+    font-weight: 500;
+}
+
+._3kFGv {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 231px;
+}
+._3Iuwi {
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 32px;
+    margin-right: 24px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+._1HhXF {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+._3vvh6 {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 16px;
+    color: hsl(0, 0%, 30%);
+    font-weight: 500;
+}
+
+._3kFGv {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 231px;
+}
+._3Iuwi {
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 32px;
+    margin-right: 24px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+._3VE_Q {
+    text-decoration: none;
+    line-height: 32px;
+    color: hsl(0, 0%, 20%);
+    font-size: 14px;
+}
+
+._2kkyX {
+    color: hsl(0, 0%, 60%);
+    font-size: 12px;
+}
+
+_3Iuwi {
+    
+    display: flex;
+    line-height: 32px;
+    margin-right: 24px;
+    
+    justify-content: space-between;
+}
+._1o7LM {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+}
+._1bTly {
+    
+    display: flex;
+    
+    align-items: baseline;
+}
+._3rUJ8 {
+    display: -ms-flexbox;
+    display: flex;
+    
+    justify-content: flex-start;
+    
+    flex-wrap: wrap;
+    
+    align-items: baseline;
+}
+
+._1X0WU {
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    color: hsl(0, 0%, 20%);
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(0, 0%, 30%);
+    margin-right: 8px !important;
+    line-height: 32px;
+}
+
+._1cD1- {
+    margin-right: 8px !important;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+}
+
+._2OqIW {
+    display: inline;
+}
+
+._2OYn5 {
+    margin: 0 4px;
+}
+._3o55k {
+    font-weight: 300;
+}
+
+_2rHkX {
+    
+    display: -ms-flexbox;
+    
+    -ms-flex-pack: start;
+    
+    -ms-flex-wrap: wrap;
+
+    
+    align-items: baseline;
+    margin: 0 8px 0 0;
+}
+._2FpDo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+
+._3g6eY {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.GlMar {
+    display: block;
+    color: hsl(0, 0%, 20%);
+    font-size: 12px;
+    margin: 0 8px;
+    text-decoration: underline;
+}
+.m0T0C {
+    margin-bottom: 24px;
+}
+._47ahp {
+    margin: 0 -16px;
+}
+
+._2tY3C.yOn4a {
+    display: block;
+    margin: 0 auto;
+    max-width: 1104px;
+}
+
+._1cn3x {
+    
+    flex: 1 0 320px;
+    min-width: 0;
+}
+._2sT86 {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+._3HYTF {
+    font-weight: 700;
+}
+._2OqIW {
+    display: inline;
+}
+._3LDhC {
+    color: hsl(0, 0%, 20%);
+    font-weight: 300;
+}
+._2OYn5 {
+    margin: 0 4px;
+}
+
+._1x3ky {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px 8px;
+    border: 1px solid hsl(0, 0%, 90%);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.wcg2R {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    color: hsl(0, 0%, 20%);
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+.deTU3 {
+    padding: 0 8px;
+    border: 1px solid hsl(0, 0%, 90%);
+    border-left: none;
+    display: block;
+    color: hsl(0, 0%, 60%);
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.m0T0C {
+    margin-bottom: 24px;
+}
+._47ahp {
+    margin: 0 -16px;
+}
+
+.m0T0C[_ngcontent-emp-c1] {
+    margin-bottom: 24px;
+}
+
+
+
+
+
+._2tY3C.yOn4a {
+    display: block;
+    margin: 0 auto;
+    max-width: 1104px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+._1cn3x {
+
+    flex: 1 0 320px;
+    min-width: 0;
+}
+._2sT86 {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+}
+
+.large{
+    margin-left: 15px;
+    margin-left: 15px;
+}
+    
+._3Oe1A {
+    padding: 0;
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    border-radius: 4px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+    
+
+._25Upe {
+    position: relative;
+    /* width: 39%; */
+    padding: 16px;
+}
+
+
+element.style {
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+* {
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+._3Oe1A {
+    padding: 0;
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    border-radius: 4px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    
+    display: flex;
+    width: 100%;
+}
+._1scd5 {
+    width: 50px;
+    height: 50px;
+}
+._3Dupa {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+._3XNMI {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+._2_3rp {
+    position: relative;
+    background: hsl(0, 0%, 80%);
+    background-size: 900%;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+._1xvs1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.5s;
+    transition-property: left;
+    z-index: 1;
+}
+
+._2imXI .HogM0 {
+    margin-top: 16px;
+    display: block;
+}
+
+._1SQpT {
+    width: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: relative;
+    margin-top: -140px;
+    height: 140px;
+    padding: 0;
+    background: linear-gradient( to top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0) 57% );
+}
+
+.EurVi .hypZf {
+    width: calc( 100% - 187px - 39% - 16px );
+    max-width: calc( 100% - 187px - 39% - 16px );
+    padding: 16px 16px 16px 0;
+}
+
+.EurVi ._38ivw {
+    width: 187px; 
+     margin: 16px 0;
+    padding: 0 0 0 16px; 
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 1px solid hsl(0, 0%, 90%);
+    -ms-flex-direction: column;
+    flex-direction: column; 
+}
+@media (max-width: 639px){
+    ._38ivw {
+        display: none;
+    }
+
+}
+
+
+._1cn3x {
+    
+    flex: 1 0 320px;
+    min-width: 0;
+}
+
+.rKk-w {
+    margin: 24px auto;
+    text-align: center;
+}
+elements-promo {
+    margin-bottom: 52px;
+    margin-top: 60px;
+    background-color: #f93d66;
+    background: linear-gradient( 145deg, #4772d9, #5be0e0 );
+    border-radius: 4px;
+}
+
+.elements-promo__copy-wrapper {
+    
+    flex: 0 0 75%;
+    margin: 16px 0;
+    
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+._1kv1j {
+    margin: 0 16px;
+    padding: 16px 0 16px 0;
+}
+._2sT86 {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+}
+
+
+._3Oe1A {
+    padding: 0;
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    border-radius: 4px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+._25Upe {
+    position: relative;
+}
+.EurVi ._25Upe {
+    width: 39%;
+}
+._1scd5 {
+    width: 50px;
+    height: 50px;
+}
+._3Dupa {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.EurVi .hypZf {
+    width: calc( 100% - 22% - 39% - 16px );
+}
+.U157g .Jhd4X {
+    display: none;
+}
+
+.Jhd4X, .XvxbR {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.Jhd4X, .XvxbR, ._2bSMY, ._31alT {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.Jhd4X, .XvxbR {
+    
+    flex-grow: 1;
+}
+.Jhd4X, .XvxbR, ._2bSMY, ._31alT {
+    
+    display: flex;
+}
+.EurVi ._38ivw {
+    width: 187px;
+    margin: 16px 0;
+    padding: 0 0 0 16px;
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 1px solid hsl(0, 0%, 90%);
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+._9q1LS {
+    
+    flex-grow: 1;
+    
+    display: flex;
+    
+    flex-direction: column;
+}
+
+._3dJU8 {
+    height: 32px;
+}
+
+._7H2LP {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.VRlLl {
+    padding: 16px 0 0 0;
+    bottom: 16px;
+    right: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.oKU4K {
+    text-align: right;
+}
+a {
+    background-color: transparent;
+    
+}
+.-DeRq {
+    line-height: 28px;
+    color: hsl(0, 0%, 30%);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+._1I1Wt {
+    line-height: 20px;
+    font-size: 12px;
+    padding-right: 8px;
+}
+
+._3yoIm {
+    display: inline-block;
+    margin: 0 4px 0 0;
+}
+
+.large{
+    
+    width: 100%;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    position: relative;
+
+}
+._3ePxY {
+    height: 40px;
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    margin: 0 4px 0 0;
+    
+    flex: 1;
+    
+    flex-basis: auto;
+    text-decoration: none;
+    padding: 7px 16px;
+    color: hsl(0, 0%, 40%);
+}
+._3tfm8._3uUpH, ._3tfm8.lpgPF {
+    color: hsl(87, 58%, 45%);
+    border-color: hsl(87, 58%, 45%);
+}
+
+.-Vcje {
+    display: inline-block;
+    fill: hsl(0, 0%, 60%);
+    padding: 8px;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+}
+
+._255P_ {
+    display: inline-block;
+    fill: hsl(0, 0%, 60%);
+    padding: 8px;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid hsl(0, 0%, 90%);
+}
+
+._1bTly[_ngcontent-qvv-c1] {
+    display: flex;
+    align-items: baseline;
+}
+.elements-promo {
+    margin-bottom: 52px;
+    margin-top: 60px;
+    background-color: #f93d66;
+    background: linear-gradient( 145deg, #4772d9, #5be0e0 );
+    border-radius: 4px;
+}
+
+.elements-promo__copy-wrapper {
+    
+    flex: 0 0 75%;
+    margin: 16px 0;
+    
+    display: flex;
+    
+    justify-content: space-between;
+}
+.elements-promo__content {
+    padding: 20px 35px;
+}
+.elements-promo__logo-white {
+    display: inline-block;
+    height: 22px;
+    width: 146px;
+}
+.elements-promo .elements-heading {
+    color: hsl(0, 0%, 100%);
+}
+.fds-c-text-heading.-size-l {
+    font-size: 28px;
+}
+
+.elements-promo__button-wrapper {
+    margin-top: 16px;
+    
+}
+
+.elements-promo__button {
+    background-color: #f93d66;
+    padding: 6px 16px;
+    color: hsl(0, 0%, 100%);
+    font-size: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.elements-promo__image {
+    display: block;
+}
+
+
+
+
+
+.wrc8W {
+    height: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+}
+.JHf2a {
+    color: hsl(0, 0%, 60%);
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    max-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+._3tfm8 {
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 80%);
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    color: hsl(0, 0%, 70%);
+    text-align: center;
+    cursor: pointer;
+    margin: 1px 4px 0;
+    line-height: 1.5;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+._1xvs1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.5s;
+    transition-property: left;
+    z-index: 1;
+}
+img {
+    border-style: none;
+}
+
+
+._2Pk9X {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-decoration: underline;
+    color: hsl(0, 0%, 70%);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(0, 0%, 30%);
+    font-size: 14px;
+}
+.R8zaM {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-decoration: underline;
+    color: hsl(0, 0%, 70%);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(0, 0%, 60%);
+    font-weight: 500;
+}
+
+.Ck5w- {
+    margin-bottom: 4px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 16px;
+    position: relative;
+}
+@media (min-width: 832px){
+    ._3Gfh4 {
+        width: 280px;
+        margin-right: 24px;
+    }
+}
+
+
+
+
+/* css pour tester a affacer apres  */
+
+
+
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+
+.dimension{
+    padding-left: 50px;
+    padding-bottom: 16px;
+    padding-right: 50px;
+    padding-top: 4px;
+    margin-right: 15px;
+    margin-left: 25px;
+    border: 2px solid #f68b1e;
+    background-color: #f68b1e;
+}
+
+
+
+.flyout .sub {
+    box-shadow: inset 1px 0 1px 0 #ededed;
+}
+.flyout .sub-w {
+    width: 728px;
+    height: 100%;
+}
+.flyout .co, .flyout .co._fl .cat {
+    width: 33.33333%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.cat{
+    padding-left: 8px;
+    padding-bottom: 16px;
+    padding-right: 8px;
+    padding-top: 4px;
+}
+.flyout .s-itm, .stpr, .prd._box .prc[data-oprc]::after, .sug .sec._xprs .info, .brcbs .cbs:last-child, #jm .-gy5 {
+    color: #75757a;
+} 
+
+.products.-mabaya {
+    
+    display: flex;
+    
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+.products.-mabaya .sku.-gallery {
+    
+    flex-basis: 210px;
+}
+.products.-mabaya .sku.-gallery {
+    
+    flex-basis: 210px;
+}
+.products .sku {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.sku {
+    height: 383px;
+    position: relative;
+}
+.sku>.link {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 230px;
+    padding: 10px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.sku>.link:after, .sku>.link:before {
+    content: " ";
+    display: table;
+}
+.sku>.link>.image-wrapper {
+    margin-top: 19px;
+    position: relative;
+    width: 210px;
+    height: 210px;
+}
+div.osh-spinner>i.-loaded, img.lazy.-loaded {
+    background-image: none;
+}
+.h2, h2 {
+    font-size: 25px;
+}
+.sku>.link>.title {
+    margin: 0;
+    padding: 0;
+}
+.sku>.link>.price-container>.sale-flag-percent {
+    border: 2px solid #f68b1e;
+    color: #f68b1e;
+    float: right;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    padding: 3px 4px;
+    margin-left: 10px;
+}
+
+.sku>.link>.price-container>.price-box {
+    display: block;
+    margin-bottom: 3px;
+    white-space: normal;
+}
+.sku>.link>.price-container>.price-box>.price {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #202020;
+    display: inline-block;
+}
+.sku>.link>.price-container>.price-box>.price.-old {
+    display: inline-block;
+    color: #606060;
+    font-size: 9px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.list.-sizes {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 0;
+}
+.sku>.link>.osh-btn {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+.osh-btn>.additional-content, .osh-btn>.label, .osh-btn>.sub-label, .osh-btn>i {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.42857;
+}
+.sku>.link>.title>.brand {
+    display: block;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #404040;
+    border-bottom: 1px solid #e9e9e9;
+    margin: 4px 0;
+    padding-bottom: 4px;
+}
+.sku>.link>.title {
+    margin: 0;
+    padding: 0;
+}
+
+.sku>.link>.title>.name {
+    display: block;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000;
+    margin: 3px 0 5px 0;
+    text-align: left;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.824em;
+}
+.sku>.link>.title>.brand {
+    display: block;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #404040;
+    border-bottom: 1px solid #e9e9e9;
+    margin: 4px 0;
+    padding-bottom: 4px;
+}
+.sku>.link {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 230px;
+    padding: 10px;
+}

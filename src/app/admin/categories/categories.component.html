@@ -1,0 +1,414 @@
+<section class="container-fluid">
+  <app-menu-admin></app-menu-admin>
+
+</section>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="rechercher">
+          </mat-form-field>
+    </div>
+     
+    <!-- <div class="class-col-md-8"></div>
+    <div class="col-sm-4"> -->
+      <!-- <div _ngcontent-mui-c1="" class="div_bar_search"><br _ngcontent-mui-c1=""><br _ngcontent-mui-c1="">
+        <form _ngcontent-mui-c1="" action=""> -->
+          <!-- <div _ngcontent-mui-c1="" class="div_bar_search_1"><input _ngcontent-mui-c1="" aria-label="search"
+              autocapitalize="off" autocomplete="off" autocorrect="off" class="Vd9D9" data-test-selector="autosuggest"
+              name="term" placeholder="chercher un produit,une marque ou des accessoires"
+              style="border-radius:2px 0 0 2px" type="search" value=""><button _ngcontent-mui-c1="" class="_2O-ZB"
+              style="border-radius:0 2px 2px 0"><span _ngcontent-mui-c1="" class="_2MKh_">Search</span>
+              <title _ngcontent-mui-c1="">Search</title>
+            </button></div> -->
+        
+        <!-- </form>
+
+      </div> -->
+
+    
+
+
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <app-menu-left-admin></app-menu-left-admin>
+    </div>
+    <br>
+    <div class="col-sm-9">
+      <h2>
+        <div>Liste des categories</div>
+      </h2>
+      <div class="col-sm-8 offset-sm-8"> <button class="add_categorie btn" data-toggle="modal"
+          data-target="#myModalAddSousCategorie">ajouter une cateorie</button></div>
+      <div class="col-sm-12 offset-sm-1 table-responsive">
+        <br><br>
+      <!-- test -->
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!-- Position Column -->
+           <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container> 
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Actions">
+              <th mat-header-cell *matHeaderCellDef> Action </th>
+              <td mat-cell *matCellDef="let element">
+                  <div class="example-button-row">
+                      <!-- <button mat-stroked-button>Basic</button> -->
+                      <button mat-stroked-button color="primary">Voir</button>
+                      <button mat-stroked-button color="accent">Modifier</button>
+                      <button mat-stroked-button color="warn">Supprimer</button>
+                      <!-- <button mat-stroked-button disabled>Disabled</button> -->
+                   
+                    </div> 
+                 </td>
+            </ng-container>
+          
+        
+          <!-- <ng-container matColumnDef="description">
+              <th mat-header-cell > Description </th>
+              <td mat-cell *matCellDef="let element"> Action </td>
+            </ng-container> -->
+          <!-- Symbol Column -->
+          <!-- <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container> -->
+        
+          <tr mat-header-row *matHeaderRowDef="this.displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+        <!-- <table id="example" class="table table-bordered table-hover  table-bordered table-responsive col-sm-12"
+          style="width:100%">
+
+          <thead class="col-sm-12">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">name</th>
+            
+              <th scope="col">Description</th>
+           
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="col-sm-12">
+            <tr *ngFor="let categorie of this.listcategories;let i = index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{this.listcategories[i].name}}</td>
+
+              <td>{{this.listcategories[i].description}}</td>
+
+              <td class="collapsing">
+                <button class="btn btn-outline-primary espace" (click)="EditCategorie(categorie)" data-toggle="modal"
+                  data-target="#myModalEditCategorie">Modifier</button>
+
+                <button class="btn btn-outline-danger ">Suprimer</button>
+
+              </td>
+            </tr>
+
+          </tbody>
+        -->
+      <!-- </table> -->
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+<!-- 
+    modal pour ajoutez une categorie -->
+
+<div class="modal fade" id="myModalAddCategorie">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div>
+          <button type="button" class="close button4" data-dismiss="modal">fermer</button><br>
+          <span class="modal-title" id="part"></span>
+          <span class="modal-title Tcolor" id="com"> </span>
+
+
+        </div>
+
+      </div>
+      <br>
+
+      <!-- Modal body -->
+
+      <div class="col-md-12 center-block style=float:none; width: 400px;">
+        <h2 class=" text-center cat">Ajoutez une categorie</h2>
+
+        <div class="alert alert-success" role="alert" *ngIf="this.succes_categorie">
+            {{this.succes_categorie}}
+          </div>
+
+        <form class="border form">
+          <br>
+
+          <div class="row">
+            <div class="form-group  col-sm-10 offset-sm-1">
+              <label for="exampleFormControlSelect1">Nom</label>
+              <input type="text" name="name" [(ngModel)]="this.categories_to_post.name" class="form-control"
+                placeholder="nom" required>
+                <div class="alert alert-danger" role="alert" *ngIf="this.isNameNull">
+                    Le nom d'une categorie ne doit pas etre  <strong>vide</strong> 
+                  </div>
+
+
+
+            </div>
+          </div>
+          <div class="row">
+            <!-- <div class="form-group col-sm-8 offset-sm-1  ">
+              <label for="exampleInputPassword1">Sous Categorie</label>
+              <select [(ngModel)]="this.categories_to_post.sous_type" name="sous_type" class="form-control"
+                id="exampleFormControlSelect1">
+                <option *ngFor="let c of this.listSouscategories " [ngValue]="c">{{c.name}}</option>
+
+              </select>`
+              <br>
+
+            </div> -->
+
+            <!-- <button class="btn btn-primary taille " data-toggle="modal"
+              data-target="#myModalAddSousCategorie">add</button> -->
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-10 offset-sm-1">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"
+                [(ngModel)]="this.categories_to_post.description"></textarea>
+            </div>
+          </div> 
+          <div class=" col-sm-12 offset-sm-1 ">
+
+            <button type="submit" value="" (click)=" ajoutezCategories()"  *ngIf="!this.isPageLoading"
+              class="center col-sm-10 text-white button e-btn--3d -color-primary buttonconnect"><br>
+              Ajouter
+            </button>
+            <button type="submit" value="" (click)=" ajoutezCategories()" *ngIf="this.isPageLoading"
+              class="center col-sm-10 button btn btn-success ">
+              chargement ...<i class="fas fa-spinner fa-spin"></i>
+            </button>
+                    <!-- spinner -->
+          <!-- <div [ngClass]="{'spinner-border': this.isPageLoading}" role="status">
+              <div class="sr-only center "  *ngIf="this.isPageLoading">Connexion en cours, Veuillez patienter </div>
+                
+            </div> -->
+          </div>
+  
+          <br><br>
+        </form>
+        <br><br>
+      </div>
+
+
+      <!-- Modal footer -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary button4" data-dismiss="modal"><span
+            class=" glyphicon glyphicon-ok " id="part"> </span>Annuler</button>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- modal pour ajoutez une nouvelle sous categories -->
+
+
+
+
+
+
+<div class="modal fade" id="myModalAddSousCategorie">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div>
+          <button type="button" class="close button4" data-dismiss="modal">fermer</button><br>
+          <span class="modal-title" id="part"></span>
+          <span class="modal-title Tcolor" id="com"> </span>
+
+
+        </div>
+
+      </div>
+      <br>
+
+      <!-- Modal body -->
+
+      <div class="col-md-12 center-block style=float:none; width: 400px;">
+        <h2 class=" text-center cat">Ajoutez une sous categorie</h2>
+        <div class="alert alert-success" role="alert" *ngIf="this.success">
+            {{this.success}}
+          </div>
+          <div class="alert alert-success" role="alert" *ngIf="this.error">
+              {{this.error}}
+            </div>
+        <form class="border form">
+          <br>
+          <div class="row">
+              
+          <div class="form-group  col-sm-8 offset-sm-1">
+            <label for="exampleFormControlSelect1">Categorie</label>
+
+            <select [(ngModel)]="this.souscategories.categoryEntity" name="category_entity_id" class="form-control"
+              id="exampleFormControlSelect1">
+              <option  *ngFor="let c of this.listcategories;let i = index " [ngValue]="c">{{this.listcategories[i].name}}
+              </option>
+            </select>`
+          </div>
+          <button class="btn btn-primary taille"  data-toggle="modal"
+          data-target="#myModalAddCategorie"  data-dismiss="modal">add</button>
+        </div>
+      <div class="row">
+          <div class="form-group col-sm-8 offset-sm-1">
+            <label for="exampleInputPassword1">nom</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="nom" name="nom"
+              [(ngModel)]="this.souscategories.nom">
+          </div>
+          <div class="alert alert-danger form-group col-sm-8 offset-sm-1" role="alert" *ngIf="this.isNameNull">
+              Le nom d'une sous categorie et de la categorie ne doivent pas etre  <strong>vides</strong> 
+            </div>
+      </div>
+          <br>
+
+<div class="row">
+          <div class=" col-sm-10 offset-sm-1 ">
+
+            <button type="submit" value="" (click)=" ajoutezSousCategories()" *ngIf="!this.isPageLoading"
+              class="center col-sm-10 text-white button e-btn--3d -color-primary buttonconnect"><br>
+              Ajouter
+            </button>
+            <button type="submit" value="" (click)=" ajoutezSousCategories()" *ngIf="this.isPageLoading"
+              class="center col-sm-10 button btn btn-success ">
+              chargement ...<i class="fas fa-spinner fa-spin"></i>
+            </button>
+          </div>
+        </div>
+          <br><br>
+        </form>
+        <br><br>
+      </div>
+
+
+      <!-- Modal footer -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary button4" data-dismiss="modal"><span
+            class=" glyphicon glyphicon-ok " id="part"> </span>Annuler</button>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- modal pour modifier une categorie -->
+
+<div class="modal fade" id="myModalEditCategorie" *ngIf="showmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div>
+          <button type="button" class="close button4" data-dismiss="modal">fermer</button><br>
+          <span class="modal-title" id="part"></span>
+          <span class="modal-title Tcolor" id="com"> </span>
+
+
+        </div>
+
+      </div>
+      <br>
+
+      <!-- Modal body -->
+
+      <div class="col-md-12 center-block style=float:none; width: 400px;">
+        <h2 class=" text-center cat">Modifier une categorie</h2>
+        <form class="border form">
+          <br>
+
+
+          <div class="form-group  col-sm-10 offset-sm-1">
+            <label for="exampleFormControlSelect1">Nom</label>
+            <input type="text" name="name" [(ngModel)]="this.categorie_to_edit.name" class="form-control"
+              placeholder="nom">
+
+
+
+
+          </div>
+          <div class="form-group col-sm-10 offset-sm-1 ">
+            <label for="exampleInputPassword1">Sous Categorie</label>
+            <select [(ngModel)]="this.categories_to_post.sous_type" name="sous_type" class="form-control"
+              id="exampleFormControlSelect1">
+              <option *ngFor="let c of listcategories" [ngValue]="c">{{c.name}}</option>
+
+            </select>`
+            <br>
+            <!-- <button class="btn btn-primary col-sm-2" (click)="openSousCategorie()"
+              >add</button> -->
+          </div>
+          <div class="form-group col-sm-10 offset-sm-1">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"
+              [(ngModel)]="this.categorie_to_edit.description"></textarea>
+          </div>
+          <div class=" col-sm-12 offset-sm-1 ">
+
+
+            <button type="submit" value="" (click)=" EditCategorie(this.categorie_to_edit)"
+              class="center col-sm-10 text-white button e-btn--3d -color-primary buttonconnect"><br>
+              modifier
+            </button>
+          </div>
+          <br><br>
+        </form>
+        <br><br>
+      </div>
+
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary button4" data-dismiss="modal"><span
+            class=" glyphicon glyphicon-ok " id="part"> </span>Annuler</button>
+      </div>
+
+    </div>
+  </div>
+</div>

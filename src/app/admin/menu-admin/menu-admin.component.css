@@ -1,0 +1,40 @@
+.header_top {
+    display: flex;
+
+}
+.color_menu1_2{
+    background-color: #262626;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+.color_menu_3{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e1e8ed;
+    height: 48px;
+}
+.menu_element{
+    color: hsl(0,0%,100%);
+    display: inline-block;
+    padding: 16px;
+    padding-bottom: 12px;
+    
+    text-decoration: none;
+}
+.page {
+    height: 100%;
+    position: relative;
+}
+.panier{
+    color: hsl(0,0%,100%);
+    display: inline-block;
+    padding: 16px 8px 16px 16px;
+    padding-bottom: 12px;
+    
+    text-decoration: none;
+}
+
+
+
+

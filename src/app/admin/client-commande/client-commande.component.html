@@ -1,0 +1,197 @@
+<section class="container-fluid">
+  <app-menu-admin></app-menu-admin>
+
+</section>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="rechercher">
+      </mat-form-field>
+
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <app-menu-left-admin></app-menu-left-admin>
+    </div>
+    <br>
+    <div class="col-sm-9">
+      <h2>
+        <div>Liste des commandes de {{this.user.nom}} </div>
+      </h2>
+     
+      <div class="col-sm-12  table-responsive">
+        <br><br>
+        <!-- liste des produits commandé par un client -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="this.showproduit">
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Numero </th>
+            <td mat-cell *matCellDef="let element;let i =index;"> {{element.idLign}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Prix</th>
+            <td mat-cell *matCellDef="let element;let i =index;"> {{element.price}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="quantite">
+            <th mat-header-cell *matHeaderCellDef> Quantite </th>
+            <td mat-cell *matCellDef="let element let i =index;"> {{element.quantite}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="prixTotalArticle">
+            <th mat-header-cell *matHeaderCellDef> prixTotalArticle </th>
+            <td mat-cell *matCellDef="let element;let i =index;"> {{element.prixTotalArticle }} </td>
+          </ng-container>
+
+         
+
+          <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+              <div class="example-button-row">
+                <button mat-stroked-button color="primary" (click)="showCommandeClient(element.id)">voir
+                  commandes</button>
+                <!-- <button mat-stroked-button color="accent">Supprimer</button> -->
+
+              </div>
+
+            </td>
+          </ng-container>
+
+
+
+
+          <tr mat-header-row *matHeaderRowDef="this.displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <!-- liste des modeles commandés par un showCommandeClient -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="!this.showproduit">
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="idNouModel">
+            <th mat-header-cell *matHeaderCellDef> Numero </th>
+            <td mat-cell *matCellDef="let element;"> {{element.idNouModel}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="typeTissu">
+            <th mat-header-cell *matHeaderCellDef>Type Tissu</th>
+            <td mat-cell *matCellDef="let element;"> {{element.typeTissu}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="nombreDeMetre">
+            <th mat-header-cell *matHeaderCellDef> Nombre métre </th>
+            <td mat-cell *matCellDef="let element "> {{element.nombreDeMetre}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="couleur">
+            <th mat-header-cell *matHeaderCellDef> Couleur </th>
+            <td mat-cell *matCellDef="let element;let i =index;"> {{element.couleur}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="model">
+            <th mat-header-cell *matHeaderCellDef> Model </th>
+            <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+          </ng-container>
+          <ng-container matColumnDef="adresseLivraison">
+            <th mat-header-cell *matHeaderCellDef> adresse Livraison</th>
+            <td mat-cell *matCellDef="let element"> {{element.adresseLivraison}} </td>
+          </ng-container>
+          <ng-container matColumnDef="dateLivraison">
+            <th mat-header-cell *matHeaderCellDef> date Livraison</th>
+            <td mat-cell *matCellDef="let element"> {{element.dateLivraison}} </td>
+          </ng-container>
+          <ng-container matColumnDef="dateCommande">
+            <th mat-header-cell *matHeaderCellDef> Date Commande</th>
+            <td mat-cell *matCellDef="let element"> {{element.dateCommande|date }} </td>
+          </ng-container>
+          <ng-container matColumnDef="paiementCash">
+            <th mat-header-cell *matHeaderCellDef> Paiement Cash </th>
+            <td mat-cell *matCellDef="let element"> {{element.paiementCash}} </td>
+          </ng-container>
+          <ng-container matColumnDef="paiementOrangeMoney">
+            <th mat-header-cell *matHeaderCellDef> Paiement Orange Money</th>
+            <td mat-cell *matCellDef="let element"> {{element.paiementOrangeMoney}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+              <div class="example-button-row">
+                <button mat-stroked-button color="primary" data-toggle="modal" data-target="#exampleModalCenter" (click)="showMesureCommande(element)">Voir mesure
+                </button>
+                <!-- <button mat-stroked-button color="accent">Supprimer</button> -->
+
+              </div>
+
+            </td>
+          </ng-container>
+
+
+
+
+          <tr mat-header-row *matHeaderRowDef="this.displayedColumn"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumn;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+<div *ngIf="this.ismesure">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" >Mesure de la commande numero : {{mesure.id}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table>
+
+          <br>
+          <th style="padding-left: 15px;">
+              <tr *ngFor="let commande of displayed">
+                  <hr> <br> {{commande}} </tr>
+          </th>
+          <br>
+          <hr>
+    
+          <th>
+              <tr *ngFor="let value of this.listmesure">
+                  <hr> <br> {{value}}  cm</tr>
+          </th>
+          <hr>
+    
+      </table>
+    
+    </div> 
+        
+      
+    
+    </div>
+  </div>
+</div>
+</div>

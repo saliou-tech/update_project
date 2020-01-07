@@ -1,0 +1,119 @@
+<app-menu></app-menu>
+<br>
+<section class="container-fluid">
+    
+    <div class="row">
+    
+        <div class="col-md-8 offset-md-4">
+               
+            <form class="example-form">
+                <h1 class="col10 -flupp -or5 -b -fs20 -pvm">Créer un compte</h1>
+
+                <table class="example-full-width" cellspacing="0">
+                      
+                    
+                    <tr>
+                        
+                        <td>
+                            <br>
+                            <mat-form-field class="example-full-width" [ngClass]="{'error':this.isnameNotvalid ||this.isnameShort}">
+                                <input matInput placeholder="nom" name="nom" [(ngModel)] = this.register.nom required >
+                                
+                                <mat-error *ngIf="this.isnameNotvalid">
+                                    veuilez renseigner votre <strong>nom</strong>
+                                  </mat-error>
+                                  <mat-error *ngIf="this.isnameShort">
+                                    veuillez donner un  <strong>nom</strong> correcte
+                                  </mat-error>
+                            </mat-form-field>
+
+                  
+                            
+                        </td>
+                        <td>
+                            <br>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="username" name="username" [(ngModel)] = this.register.username required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="example-full-width" cellspacing="0">
+                    <br>
+                    <tr>
+                        <br>
+                        <td>
+                            <br>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Adresse e-email" name="email" [(ngModel)] = this.register.email>
+                                
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <br>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Mot de passe" [type]="hide ? 'password' : 'text'" name="password" [(ngModel)] = this.register.password required>
+                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <br>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="confirmer mdp" [type]="hide ? 'password' : 'text'" name="repassword" [(ngModel)] = this.register.repassword required>
+                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <span matPrefix>+221 &nbsp;</span>
+                                <input type="tel" matInput placeholder="Telephone" name="telephone" [(ngModel)] = this.register.telephone>
+                                <mat-icon matSuffix>mode_edit</mat-icon>
+                              </mat-form-field>
+                        </td>
+
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="adresse" name=" adresse" [(ngModel)] = this.register.adresse>
+                            </mat-form-field>
+                        </td>
+
+
+                    </tr>
+                </table>
+            </form>
+            <br>
+            <div class="col-md-6  etendre " *ngIf="!this.islogin">
+                <br>"
+                <i class="fas fa-sign-in-alt agrandiricone"  (click) = "createAccount()"> </i><button class="btn  text-white" (click) = "createAccount()"><span class="connect">
+                        Créer un compte</span> </button>
+
+            </div>
+            <div class="col-md-6   eten" (click)="createAccount()" *ngIf="this.islogin">
+        
+                <span  class="col-md-1"><mat-spinner [diameter]="40"></mat-spinner></span>
+         <button (click)="createAccount()" type="submit" class="btn  text-white "> <span class="connect"> Chargement...</span>  </button>
+               
+              </div>
+            <br>
+            <div class="col-md-6   etendre2 ">
+                <br>
+                <i class="fab fa-facebook-square"></i><button class="btn  text-white "><span class="connect">
+                        Créer un compte avec facebook</span> </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<br>
+<app-footer></app-footer>

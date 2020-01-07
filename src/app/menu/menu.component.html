@@ -1,0 +1,164 @@
+<section class="container-fluid">
+    <section class="row">
+
+        <nav class="navbar navbar-expand-lg navbar-dark  color_menu1_2 container-fluid header_top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class=" col-md-4">
+                    <a class="navbar-brand menu_element" href="#">Mouride-Authentique-Style</a>
+                </div>
+
+                <div class=" col-md-7">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle menu_element text-white" href="#" id="navbardrop"
+                                data-toggle="dropdown" routerLink="/commande">
+
+                                Effectuer une Commande
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item " routerLink="/commande">Baye Lahad</a>
+                                <a class="dropdown-item" routerLink="/commande">Baye Sonhibou</a>
+                                <a class="dropdown-item" routerLink="/commande">Touki Ndiareme</a>
+                                <a class="dropdown-item" routerLink="/commande">Khaftaane Simple</a>
+                            </div>
+                        </li> -->
+                        <li class="nav-item dropdown" *ngFor="let categorie of this.listcategories; let i =index">
+                            <a class="nav-link dropdown-toggle menu_element text-white" href="" id="navbardrop"
+                                data-toggle="dropdown" (click)="getCategorie(categorie.name)">
+                                {{categorie.name}}
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item "
+                                    *ngFor="let souscategorie of this.listcategories[i].typeCategories;let j = index"
+                                    (click)="getSousCategorie(souscategorie)">{{souscategorie.name}}</a>
+
+                            </div>
+                        </li>
+
+
+
+
+                        <li class="nav-item">
+
+                            <span class="panier" routerLink="/panier">
+                                <!-- <svg _ngcontent-kfh-c1="" fill="currentColor" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" style="vertical-align:middle"
+                                    viewBox="0 0 16 16" width="1em">
+                                    <title _ngcontent-kfh-c1="">Cart</title>
+                                    <g _ngcontent-kfh-c1="">
+                                        <path _ngcontent-kfh-c1=""
+                                            d="M 0.009 1.349 C 0.009 1.753 0.347 2.086 0.765 2.086 C 0.765 2.086 0.766 2.086 0.767 2.086 L 0.767 2.09 L 2.289 2.09 L 5.029 7.698 L 4.001 9.507 C 3.88 9.714 3.812 9.958 3.812 10.217 C 3.812 11.028 4.496 11.694 5.335 11.694 L 14.469 11.694 L 14.469 11.694 C 14.886 11.693 15.227 11.36 15.227 10.957 C 15.227 10.552 14.886 10.221 14.469 10.219 L 14.469 10.217 L 5.653 10.217 C 5.547 10.217 5.463 10.135 5.463 10.031 L 5.487 9.943 L 6.171 8.738 L 11.842 8.738 C 12.415 8.738 12.917 8.436 13.175 7.978 L 15.901 3.183 C 15.96 3.08 15.991 2.954 15.991 2.828 C 15.991 2.422 15.65 2.09 15.23 2.09 L 3.972 2.09 L 3.481 1.077 L 3.466 1.043 C 3.343 0.79 3.084 0.612 2.778 0.612 C 2.777 0.612 0.765 0.612 0.765 0.612 C 0.347 0.612 0.009 0.943 0.009 1.349 Z M 3.819 13.911 C 3.819 14.724 4.496 15.389 5.335 15.389 C 6.171 15.389 6.857 14.724 6.857 13.911 C 6.857 13.097 6.171 12.434 5.335 12.434 C 4.496 12.434 3.819 13.097 3.819 13.911 Z M 11.431 13.911 C 11.431 14.724 12.11 15.389 12.946 15.389 C 13.784 15.389 14.469 14.724 14.469 13.911 C 14.469 13.097 13.784 12.434 12.946 12.434 C 12.11 12.434 11.431 13.097 11.431 13.911 Z">
+                                        </path>
+                                    </g>
+                                </svg> -->
+
+
+                            </span>
+                        </li>
+                        <li class="nav-item dropdown " *ngIf="newUser">
+                            <a class="nav-link dropdown-toggle menu_element text-white" href="#" id="navbardrop"
+                                data-toggle="dropdown">
+                                Connexion
+                            </a>
+
+                            <div class="inbox dropdown-menu">
+                                <div class="-pam"><a class="btn _prim -fw _md" routerLink="/loginUser">Se
+                                        connecter</a> </div>
+                                <div class="-hr _hx2 -hr-bb -fs0 -tac " data-mid-txt="Ou" routerLink="/inscription"><a
+                                        class="btn _def -mbs -mtm">Créer un
+                                        compte</a></div>
+
+                            </div>
+
+
+                        </li>
+
+                        <a class="nav-link  menu_element text-white" href="" *ngIf="this.isNameUserExist">
+                            Bonjour,{{this.client.nom}}</a>
+                        <a class="nav-link  menu_element text-white" routerLink="/panier">
+                            <mat-icon [matBadge]="this.monpanier?.length" [matBadgeHidden]="this.monpanier?.length < 1"
+                                matBadgeColor="warn">add_shopping_cart</mat-icon>
+                        </a>
+
+                        <li class="nav-item" *ngIf="!newUser">
+                            <span class="panier" routerLink="/panier">
+                                Inscription
+
+                            </span>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+    </section>
+    <section class="row">
+
+        <nav class="navbar navbar-expand-sm color_menu1_2   container-fluid header_top">
+
+
+
+
+
+            <!-- <div class="col-md-6">
+                    <ul class="navbar-nav">
+                        <li class="nav-item header-categories header-categories__links"
+                            *ngFor="let souscategorie of this.listcategories[0].typeCategories;let j = index">
+                            <a class="nav-link text-white" href="#"></a>
+
+                        </li>
+                     
+                    </ul>
+                </div> -->
+
+
+        </nav>
+
+
+    </section>
+    <section class="row">
+
+        <nav class="navbar navbar-expand-sm color_menu_3 navbar-dark container-fluid header_top">
+
+
+
+
+
+            <!-- <div class="col-md-6">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"
+                            *ngFor="let souscategorie of this.listcategories[1].typeCategories;let j = index">
+                            <a class="" href="#"></a>
+                        </li>
+                        
+
+
+                        <li class="nav-item">
+                            <a class="" href="#" id="navbardrop"
+                                data-toggle="">
+                                
+                            </a>
+                            <div class=""
+                                *ngFor="let souscategorie of this.listcategories[2].typeCategories;let j = index">
+                                <a class="" href="#"></a>
+                               
+                            </div>
+                        </li>
+                    </ul>
+                </div> -->
+        </nav>
+
+
+
+    </section>
+</section>

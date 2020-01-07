@@ -1,0 +1,110 @@
+
+<html>
+    <head>
+      
+    </head>
+    <body onload="myFunction()">
+<app-menu></app-menu>
+
+<div class="container test">
+    <br>
+    <div class="container-fluid">
+        <div class="context-header ">
+            <div class="grid-container  ">
+                <br><br>
+
+                <nav class=" ">
+                    <a href="#"></a>
+
+                    <div class="item-header" data-view="itemHeader">
+                        <div class="item-header__top">
+                            <div class="item-header__title">
+                                <h5 class="t-heading -color-inherit -size-l h-m0 is-hidden-phone">
+                                    {{article.nom}}
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="col-sm-8">
+            <mat-card class="example-card">
+
+                <div class="zoom colonne">
+                    <div><img mat-card-image class="img-thumbnail"
+                            src="{{this.image}}" style="width: 600px;"
+                            alt="Photo of a Shiba Inu"> </div>
+                </div>
+                <mat-card-content>
+                    {{article.description}}
+                </mat-card-content>
+                <!-- <button id="fac"><i class="fab fa-facebook-f" href="facebook.com">partager </i></button> &nbsp;
+                &nbsp;
+                <button id="go"> <i class="fa fa-google" aria-hidden="true" href="google.com"></i>partager</button> -->
+                <iframe id="jinu" src=""  width="200" height="200" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true">
+            </iframe> &nbsp;
+         
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share" data-url="Your_URL_Here" data-counter="top"></script>
+       
+        </mat-card>
+        </div>
+        <div class="col-sm-4">
+            <mat-card class="example-card">
+                <div class="ttl text-left">{{article.nom}}</div>
+                <h5 class="js-purchase-price text-right">{{article.prixUnitaire}} FCFA</h5>
+                <hr>
+                <br><br>
+                <mat-card-content class="limit">
+                    {{article.description}}
+                    <br>
+                </mat-card-content>
+                <div class="purchase-form__button">
+                    <button name="button" type="submit" data-toggle="modal" data-target="#exampleModalCenter"
+                        class="js-purchase__add-to-cart e-btn--3d -color-primary -size-m -width-full">
+                        <i class="fas fa-cart-plus" style="margin-right: 0.4em"></i> <strong>Ajouter au
+                            panier</strong>
+                    </button>
+                </div>
+                <div class="purchase-form__button">
+                    <button name="buy_now_button" type="submit" value="Buy Now"
+                        class="js-purchase__buy-now e-btn--3d -size-m -width-full" data-toggle="modal"
+                        data-target="#exampleModalCenter">
+                        <strong>Acheter Maintenant</strong>
+                    </button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<!-- fin partie pour le titre du produit -->
+<!-- corps de le page -->
+<!-- <div class="content-main" id="content"></div> -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title ttl" id="exampleModalCenterTitle">Ajouté au panier</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="fs16">{{article.nom}} a été ajouté au panier</div>
+            </div>
+            <div class=" modal-footer ">
+                <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal">poursuivre votre
+                    achat</button>
+                <button type="button" class="btn btn-success ttl " (click)="ajouterAuPanier(this.article)"
+                    data-dismiss="modal">Finaliser votre commande </button>
+            </div>
+        </div>
+    </div>
+</div>

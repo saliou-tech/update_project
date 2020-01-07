@@ -1,0 +1,224 @@
+<app-menu></app-menu>
+
+
+
+
+
+<div class="row_color row">
+
+    <div class="example-container mat-elevation-z8 col-md-6 offset-md-3 div_color" id="contentToConvert">
+        <kendo-pdf-export #pdf forcePageBreak=".page-break">
+            <div class="size-a4">
+                <div>
+                    <br>
+                    <h3>Nom du client: {{this.client.nom}}</h3>
+                    <br>
+                    <h3 class="text-center">Detail de la commande</h3>
+                </div>
+                <div class=" row">
+                    <table>
+                        <br>
+                        <th style="padding-left: 15px;">
+                            <tr *ngFor="let commande of displayedColumns">
+                                <hr> <br> {{commande}} </tr>
+                        </th>
+                        <br>
+                        <hr>
+
+                        <th>
+                            <tr *ngFor="let value of this.listcommande">
+                                <hr> <br> {{value}} </tr>
+                        </th>
+
+
+                    </table>
+                </div>
+                <div>
+                    <br>
+                    <h3 class="text-center">Detail de la mesure</h3>
+                    <hr>
+                </div>
+                <div class="row">
+                    <table>
+
+                        <br>
+                        <th style="padding-left: 15px;">
+                            <tr *ngFor="let commande of displayedColumn">
+                                <hr> <br> {{commande}} </tr>
+                        </th>
+                        <br>
+                        <hr>
+
+                        <th>
+                            <tr *ngFor="let value of this.listmesure">
+                                <hr> <br> {{value}} </tr>
+                        </th>
+                        <hr>
+
+                    </table>
+
+                </div>
+                <div>
+                    <br>
+                    <h3 class="text-center">Prix de la Commande</h3>
+                    <hr>
+                </div>
+                <div class="row">
+                    <table>
+
+                        <br>
+                        <th style="padding-left: 15px;">
+                            <tr class="text-primary">
+                                <hr> <br> Prix </tr>
+                        </th>
+                        <br>
+                        <hr>
+
+                        <th>
+                            <tr>
+                                <hr> <br> {{this.commande[0].articleEntity.prixUnitaire }} FCFA </tr>
+                        </th>
+                        <hr>
+
+                    </table>
+
+                </div>
+                <br>
+                <div>
+                    <button type="button" class="btn btn-success  espace " (click)="pdf.saveAs('commande.pdf')"
+                        data-toggle="modal" data-target="#exampleModalCenter2">sauvegarder la commande
+                    </button>
+                </div>
+            </div>
+        </kendo-pdf-export>
+    </div>
+
+</div>
+<div>
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ttl" id="exampleModalCenterTitle">Salut cher Client </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="fs16">Votre commande est prise en compte veuillez passez au paiement</div>
+                </div>
+                <div class=" modal-footer ">
+                    <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je
+                        continue mes achats</button>
+                    <button type="button" class="btn btn-success ttl espace " routerLink="/paiement"
+                        data-dismiss="modal">Je passe au paiement </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="example-container mat-elevation-z8 col-md-6 offset-md-3 div_color" id="contentToConvert">
+        <kendo-pdf-export #pdf forcePageBreak=".page-break">
+            <br>
+            <h3>Nom du client: {{this.client.nom}}</h3>
+            <br>
+            <h3 class="text-center">Detail de la commande</h3>
+            <div class=" size-a4 ">
+                <table class="row">
+                    <br>
+                    <th>
+                        <tr *ngFor="let commande of displayedColumns">
+                            <hr> <br> {{commande}} </tr>
+                    </th>
+                    <br>
+                    <hr>
+
+                    <th>
+                        <tr *ngFor="let value of this.listcommande">
+                            <hr> <br> {{value}} </tr>
+                    </th>
+
+
+                </table>
+                <br>
+                <h3 class="text-center">Detail de la mesure</h3>
+                <hr>
+                <table class="row">
+
+                    <br>
+                    <th>
+                        <tr *ngFor="let commande of displayedColumn">
+                            <hr> <br> {{commande}} </tr>
+                    </th>
+                    <br>
+                    <hr>
+
+                    <th>
+                        <tr *ngFor="let value of this.listmesure">
+                            <hr> <br> {{value}} </tr>
+                    </th>
+                    <hr>
+
+                </table>
+                <br>
+                <table class="row">
+
+                    <br>
+                    <th>
+                        <tr class="text-primary">
+                            <hr> <br> Prix </tr>
+                    </th>
+                    <br>
+                    <hr>
+
+                    <th>
+                        <tr class="text-primary">
+                            <hr> <br> {{this.commande[0].articleEntity.prixUnitaire }} FCFA </tr>
+                    </th>
+                    <hr>
+
+                </table>
+            </div>
+            <br><br>
+        </kendo-pdf-export>
+        <br><br>
+
+        <div *ngIf="this.iscommandsend" (click)="sauvegarder()">
+            <button type="button" class="btn btn-success  espace " (click)="pdf.saveAs('commande.pdf')"
+                data-toggle="modal" data-target="#exampleModalCenter2">sauvegarder la commande
+            </button>
+        </div>
+    </div> -->
+
+
+
+
+
+<!-- Modal pour le paiement -->
+
+
+<!-- <div>
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ttl" id="exampleModalCenterTitle">Salut cher Client </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="fs16">Votre commande est prise en compte veuillez passez au paiement</div>
+                </div>
+                <div class=" modal-footer ">
+                    <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je
+                        continue mes achats</button>
+                    <button type="button" class="btn btn-success ttl espace " routerLink="/paiement"
+                        data-dismiss="modal">Je passe au paiement </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

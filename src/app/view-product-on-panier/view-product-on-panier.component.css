@@ -1,0 +1,62 @@
+.popup .cw{
+    border-radius: 4px;
+}
+.cls{
+    cursor: pointer;
+    font-size: 0;
+}
+.popup{padding: 8px;}
+.ic{fill: #282828;}
+.popup .ttl{font-size: 1.25rem;
+    font-weight: 500;
+    padding-right: 56px;
+    padding-top: 16px;
+    flex: 0 0 auto;
+}
+.ttl{
+    padding-left: 24px;
+}
+.popup .cont {
+    overflow: auto;
+}
+
+
+
+.-phl, .popup .ttl, .crs-w._gal::before, .crs-w._gal::after, #jm .-pll {
+    padding-left: 24px;
+}
+#jm .-pvl, #jm .-pbl {
+    padding-bottom: 24px;
+}
+#jm .-phl, .btn._i span, .dp, #jm .-prl {
+    padding-right: 24px;
+}
+#jm .-pvxl, #jm .-ptxl {
+    padding-top: 32px;
+}
+.-fs16 {
+    font-size: 1rem;
+}
+ .-pbm {
+    padding-bottom: 16px;
+}
+
+.-ptm {
+    padding-top: 16px;
+}
+.-mrs {
+    margin-right: 8px;
+}
+
+.-fw {
+    width: 100%;
+}
+.-mls {
+    margin-left: 8px;
+}
+.-fw {
+    width: 100%;
+}
+.btn._prim, .btn._sec, .btn._fb {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

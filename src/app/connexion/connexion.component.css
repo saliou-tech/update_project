@@ -1,0 +1,84 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .eten{
+    width: 100%;
+    height: auto;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    background-color: #63B175;
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+mat-spinner {
+  float:right; 
+  width: 4px; 
+  height: 4px; 
+  margin: 5px 10px 0px 0px;
+}
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  .etendre{
+    width: 100%;
+    height: auto;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    background-color: #0D3F61;
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.etendre2{
+    width: 100%;
+    height: auto;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    background-color: #40588A;
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+  .-fs20 {
+    font-size: 1.25rem;
+}
+.-b {
+    font-weight: 700;}
+    .-pbm {
+        padding-bottom: 16px;
+    }
+    .-pvm, .popup .ttl, .cms .tabs>div, #jm .-ptm {
+        padding-top: 16px;
+    }
+    .-or5 {
+        color: #0D3F61;
+    }

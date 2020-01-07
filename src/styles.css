@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+/* @import '~material-community-components/theming'; */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* html, body { height: 100%;
+width: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+@media (max-width: 667px){
+    .EurVi ._38ivw {
+        /* width: 187px;
+        margin: 16px 0;
+        padding: 0 0 0 16px;
+        display: flex; */
+        border-left: 0px solid hsl(0, 0%, 90%) !important;
+        /* flex-direction: column; */
+
+
+}
+
+
+}
+
+._1I1Wt ,._2g_QW {
+    
+    float: right !important;
+}

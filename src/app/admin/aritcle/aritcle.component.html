@@ -1,0 +1,244 @@
+<section class="container-fluid">
+        <app-menu-admin></app-menu-admin>
+    
+    </section>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="rechercher">
+                  </mat-form-field>
+            </div>
+            
+    
+    
+        </div>
+        <br>
+        
+        <div class="row">
+            <div class="col-sm-3">
+                <app-menu-left-admin></app-menu-left-admin>
+            </div>
+            <br>
+
+          
+            <div class="col-sm-9">
+                <h2><div>Liste des Articles</div></h2>
+                <div class="col-sm-8 offset-sm-8"> <button class="add_categorie btn" data-toggle="modal" data-target="#myModalAddCategorie">ajouter un article</button></div>
+                <div class="col-sm-12 offset-sm-1 table-responsive">
+                    <br><br>
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                      <!-- Position Column -->
+                       <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                      </ng-container>  
+                    
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="nom">
+                        <th mat-header-cell *matHeaderCellDef> nom </th>
+                        <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+                      </ng-container>
+                    
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef> description </th>
+                        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                      </ng-container>
+                       <ng-container matColumnDef="prixUnitaire">
+                          <th mat-header-cell *matHeaderCellDef> prix</th>
+                          <td mat-cell *matCellDef="let element"> {{element.prix}} CFA </td>
+                        </ng-container>  
+
+                        <ng-container matColumnDef="Actions">
+              <th mat-header-cell *matHeaderCellDef> Action </th>
+              <td mat-cell *matCellDef="let element">
+                  <div class="example-button-row">
+                      
+                      <button mat-stroked-button color="accent">Supprimer</button>
+                     
+                    </div>
+                  
+                 </td>
+            </ng-container>
+                    
+
+                     
+                    
+                      <tr mat-header-row *matHeaderRowDef="this.displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                        <!-- <table class="table table-bordered table-hover table-responsive col-sm-12">
+                            
+                                <thead class="col-sm-12">
+                                  <tr >
+                                    <th scope="col">#</th>
+                                    <th scope="col">nom</th>
+                                    <th scope="col">Description  </th>
+                                    <th scope="col">Prix Article</th>
+                                    
+                                    <th scope="col">Disponible</th>
+                                    
+                                    <th scope="col">Actions</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="col-sm-12">
+                                  <tr *ngFor="let article of this.listarticles;let i = index">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{article.nom}}</td>
+                                    <td>{{article.description}}</td>
+                                    <td>{{article.prixUnitaire}}</td>
+                                    
+                                    <td *ngIf="this.isavailable">oui</td>
+                                    <td *ngIf="!this.isavailable">non</td>
+                                    <td class="collapsing"> 
+
+                                         <button class="btn btn-outline-primary espace">Modifier</button>
+
+                                          <button class="btn btn-outline-danger" (click)="supprimer(article)">Suprimer</button>
+                                      
+                                      
+                                      </td>
+                                  </tr>
+                           
+                                </tbody>
+                              </table> -->
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    <!-- 
+        modal pour ajoutez une article -->
+    
+        <div class="modal fade " id="myModalAddCategorie">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close button4 modal-header" data-dismiss="modal" style="float:right;">fermer</button><br>
+              </div>
+            
+            
+              <br>
+              <div *ngIf = "success" class="alert alert-success col-sm-10 offset-sm-1" role="alert">{{this.success}}</div>
+              <!-- Modal body -->
+              
+                <div class="col-sm-12 center-block style=float:none; width: 400px;">
+                    <h2 class=" text-center cat">Ajoutez un article</h2>
+                    <form class="border form">
+                        <br>
+                        <div class="alert alert-danger form-group col-sm-10 offset-sm-1" role="alert" *ngIf="this.isNull">
+                              <strong>Le nom ,le prix et la categorie </strong>  de l'article  ne doivent pas etre  <strong>vides</strong> 
+                        </div>
+                        <br>
+                        
+                        <div class="form-group col-sm-10 offset-sm-1">
+                            <label for="exampleInputPassword1">date</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1" placeholder="date" name="date" [(ngModel)]="this.articles.date">
+                        </div>
+            
+                        
+                        <div class="form-group  col-sm-10 offset-sm-1">
+                                <label for="exampleFormControlSelect1">sous Categorie</label>
+                                <select [(ngModel)]="this.articles.typeCategory" name="sous_categorie" class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let c of this. listsouscategories" [ngValue]="c">{{c.name}}</option>
+                                 </select>
+                              </div>
+                        <div class="form-group col-sm-10 offset-sm-1">
+                            <label for="exampleInputPassword1">Nom</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nom" name="nom" [(ngModel)]="this.articles.nom">
+                        </div>
+                        <div class="form-group col-sm-10 offset-sm-1">
+                                <label for="exampleInputPassword1">Prix du produit</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="prixUnitaire" name="prixUnitaire" [(ngModel)]="this.articles.prixUnitaire">
+                        </div>
+                        <div class="form-group col-sm-10 offset-sm-1">
+                          <label for="exampleFormControlTextarea1">Description</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" [(ngModel)]="this.articles.description"></textarea>
+                        </div>
+                        <div class="input-group mb-3 col-sm-10 offset-sm-1">
+                                <!-- <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                                </div> -->
+                                <div class="">
+                                  <input type="file" class="custom-file-input" (change)="onFileChanged($event)" name="photoArticle" [(ngModel)]="this.articles.photoArticle">
+                                  <label class="custom-file-label" for="inputGroupFile01" ></label>
+                                </div>
+                        </div>
+                        <!-- <div class="form-check form-group col-sm-10 offset-sm-1">
+                            <input class="" type="radio" autocomplete="off"  name="disponible" [(ngModel)]="this.articles.disponible" [value]="1">
+                            <label class="form-check-label" for="exampleRadios1">
+                              Disponible
+                            </label>
+                          </div> -->
+                          <div class="row">
+                          <div class="custom-control col-sm-4  offset-sm-1 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1"  name="available" [(ngModel)]="this.articles.available" [value]="1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">disponible</label>
+                          </div>
+                          <div class="custom-control col-sm-4  offset-sm-1 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2"  name="available" [(ngModel)]="this.articles.available" [value]="0" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">Non disponible</label>
+                          </div>
+                        </div>
+                          <!-- <div class="custom-control col-sm-2 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline4"  name="selected" [(ngModel)]="this.articles.selected" [value]="1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline4">Publier</label>
+                          </div>
+                          <div class="custom-control col-sm-2 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline5"  name="selected" [(ngModel)]="this.articles.selected" [value]="0" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline5">Ne pas publier</label>
+                          </div> -->
+                          <div class="row">
+                          <div class="custom-control col-sm-4 offset-sm-1 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3"  name="promo" [(ngModel)]="this.articles.promo" [value]="1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline3">en promo</label>
+                          </div>
+                          <div class="custom-control col-sm-4 offset-sm-1 custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline6"  name="promo" [(ngModel)]="this.articles.promo" [value]="0" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline6">pas en promo</label>
+                          </div>
+                        </div>
+                          <!-- <div class="form-group col-sm-10 offset-sm-1"*ngIf ="afficherAncienPrix()">
+                            <label for="exampleInputPassword2"> Ancien Prix</label>
+                            <input type="number" class="form-control" id="exampleInputPassword2" placeholder="ancien Prix" name="old_price" [(ngModel)]="this.articles.old_price">
+                         </div> -->
+                          <!-- <div class="form-check  form-group col-sm-10 offset-sm-1">
+                            <input class="" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                            <label class="form-check-label" for="exampleRadios3">
+                               selected
+                            </label>
+                          </div> -->
+                        <div class=" col-sm-12 offset-sm-1 ">
+            
+                            <button type="submit" value="" (click)="ajouterArticles()"
+                                class="center col-sm-10 text-white button e-btn--3d -color-primary buttonconnect"><br>
+                                Ajouter
+                            </button>
+                        </div>
+                        <br><br>
+                    </form>
+                    <br><br>
+                </div>
+            
+              
+              <!-- Modal footer -->
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-primary button4" data-dismiss="modal"><span class=" glyphicon glyphicon-ok " id="part"> </span>Annuler</button>
+              </div> -->
+              
+            </div>
+          </div>
+        </div>

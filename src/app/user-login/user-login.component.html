@@ -1,0 +1,90 @@
+<app-menu></app-menu>
+<section class="container">
+  <br>
+  <div class="row">
+
+    <br><br>
+
+    <div class="col-md-5 ">
+      <br><br><br>
+      <form class="example-form "  >
+        
+        <h1 class="-flupp -or5 -tac -fs20 -mbm">Se connecter</h1>
+        <mat-form-field class="example-full-width col-md-11" >
+          <input matInput placeholder="username" name="username" [(ngModel)] = this.userLogin.username required>
+
+        </mat-form-field>
+        <!-- <mat-error *ngIf="this.isemailNotvalid">
+          veuilez ecrire un <strong>email valide </strong> 
+        </mat-error> -->
+       
+        <br><br>
+
+        <mat-form-field class="example-full-width col-md-11">
+            <input matInput placeholder="password" [type]="hide ? 'password' : 'text'"  name="password" [(ngModel)] = this.userLogin.password required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+
+          
+        </mat-form-field>
+
+
+
+        <!-- <input matInput placeholder="Mot de passe" formControlName="password" [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon> -->
+      </form>
+      <br><br>
+      <div class="col-md-10   etendre " (click)="login()" *ngIf="!this.islogin">
+        
+        <i class="fas fa-sign-in-alt agrandiricone"> </i> <button (click)="login()" type="submit" class="btn  text-white "><span class="connect"> Se Connecter</span> </button>
+       
+      </div>
+      <div class="col-md-10   eten" (click)="login()" *ngIf="this.islogin">
+        
+        <span  class="col-md-1"><mat-spinner [diameter]="40"></mat-spinner></span>
+ <button (click)="login()" type="submit" class="btn  text-white "> <span class="connect"> Chargement...</span>  </button>
+       
+      </div>
+      <br>
+      <div class="col-md-10   etendre2 " (click)=" facebookLogin()" >
+          
+          <i class="fab fa-facebook-square"></i><button class="btn  text-white " (click)=" facebookLogin()"><span class="connect"> Se Connecter avec facebook</span> </button>
+       
+        </div>
+    </div>
+
+    <div class="col-md-1" >
+      <br><br><br><br><br>
+        <mat-divider [vertical]="true" style="height: 100%;"></mat-divider>
+      </div>
+      
+
+
+    <div class="col-md-6  moove">
+      <br><br><br>
+            <div class="col12 -d-co -df">
+                <div class="-flupp -or5 -tac -b -fs20 -mbxl">Créer un compte</div>
+                <br><br><br>
+                <p class="-fs16 -lh-15 -fg1 -ptm">Créez votre compte client mouride authentique style en quelques clics ! Vous pouvez vous
+                    inscrire soit en utilisant votre adresse e-mail, soit via votre compte Facebook. </p>
+                    <br><br><br>
+                    <div class="col-md-10   etendre " routerLink ="/inscription">
+                        
+                        <i class="fas fa-sign-in-alt agrandiricone"> </i><button class="btn  text-white "><span class="connect" > Creer votre compte</span> </button>
+                     
+                      </div>
+                      <br>
+                      <div class="col-md-10   etendre2 ">
+                          
+                          <i class="fab fa-facebook-square"></i><button class="btn  text-white "><span class="connect"> Creer une Compte avec facebook</span> </button>
+                       
+                        </div>
+                    
+            </div>
+
+        </div>
+  </div>
+
+</section>
+<br><br>
+<app-footer></app-footer>

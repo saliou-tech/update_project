@@ -1,0 +1,214 @@
+<app-menu></app-menu>
+<br><br>
+
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8 border">
+            <br>
+
+            <!-- commande -->
+            <p style="color: red;">Les champs marqués * sont obligatoires</p>
+            <div *ngIf="this.isCommande">
+
+                <header class="e-fieldset__header -divider-bottom">
+                    <div class="e-fieldset__title">
+                        <h3 class="t-heading -size-s h-m0">
+                            Commande du Client
+
+                        </h3>
+                        <div class="e-fieldset__subtitle">
+                            <p class="t-body -size-m h-m0">
+
+                            </p>
+
+                        </div>
+                    </div>
+                </header>
+                <form class=""  #userRegistrationForm="ngForm" (ngSubmit)="onSubmit(userRegistrationForm)">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Type de tissus</label>
+                            <select class="custom-select" id="inputGroupSelect01"
+                                [(ngModel)]="this.commandeDetail.typeTissu" name="typeTissu">
+                                <option *ngFor="let c of this.TypeTissue " [ngValue]="c">{{c}}</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Couleur du tissus</label>
+                            <select class="custom-select" id="inputGroupSelect01"
+                                [(ngModel)]="this.commandeDetail.couleur" name="couleur">
+                                <option *ngFor="let c of this.couleurTissue" [ngValue]="c">{{c}}</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Model</label>
+                            <input type="text" class="form-control" id="inputPassword4"
+                                [(ngModel)]="this.commandeDetail.model" name="model" disabled>
+
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Nombre de metre</label>
+                            <input type="number" class="form-control" id="inputPassword4" placeholder="metre"
+                                [(ngModel)]="this.commandeDetail.nombreDeMetre" name="nombreDeMetre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress"   [attr.data-error]="this.commandeDetail.dateLivraison.errors != null?(this.commandeDetail.dateLivraison.errors.required? 'obligatoire de renseigner la date ':'Date de livraison'):''"><em style="color: red;">*</em>Date de livraison</label>
+                        <input type="date" class="form-control" id="inputAddress" placeholder="le .. "[(ngModel)]="this.commandeDetail.dateLivraison" name="dateLivraison" required>
+                        
+                        <span class="error">Champs obligatoire</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2"   [attr.data-error]="this.commandeDetail.adresseLivraison.errors != null?(this.commandeDetail.adresseLivraison.errors.required? 'obligatoire de renseigner l adresse ':'Adresse, Avenue..'):''"><em style="color: red;">*</em>Address de livraison</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, Avenue" [(ngModel)]="this.commandeDetail.adresseLivraison"
+                            name="adresseLivraison">
+                    </div>
+
+
+                    <footer class="e-fieldset__footer">
+                        <button type="submit" (click)="enregistrerCommande()" value=""
+                            class=" text-white button e-btn--3d -color-primary" [disabled]="!userRegistrationForm.valid"
+                            data-disable-with="Saving...">enregistrer et continuer</button>
+                    </footer>
+                </form>
+            </div>
+            <!-- mesure -->
+            <div *ngIf="this.isMesure">
+
+                <header class="e-fieldset__header -divider-bottom">
+                    <div class="e-fieldset__title">
+                        <h3 class="t-heading -size-s h-m0">
+                            Mesure du Client
+                        </h3>
+                        <div class="e-fieldset__subtitle">
+                            <p class="t-body -size-m h-m0">
+                                choisisez la taille du modele que vous voulez ou donnez vos propres mesures
+                            </p>
+                        </div>
+                    </div>
+                </header>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios"
+                        (click)=" choisirTaille()">
+                    <label class="custom-control-label" for="defaultUnchecked">Je choisi une taille pour ma commande
+                        (XL,XXL...)</label>
+                </div>
+
+                <div class="form-group" *ngIf="this.istaille">
+                    <label for="inputAddress">Taille</label>
+                    <select id="inputState" class="form-control" [(ngModel)]="this.mesureDetail.taille " name="taille">
+                        <option *ngFor="let c of this.typeDeTaille" [ngValue]="c">{{c}}</option>
+                    </select>
+                </div>
+
+                <!-- Default checked -->
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"
+                        (click)=" choisirMesure()">
+                    <label class="custom-control-label" for="defaultChecked">Je renseigne mes propres mesures pour cette
+                        commande</label>
+                </div>
+                <form class="">
+                    <div class="form-row" *ngIf="this.isMyMesure">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">longueur</label>
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="en cm"
+                                [(ngModel)]="this.mesureDetail.longueur " name="longueur">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Coud</label>
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="en cm"
+                                [(ngModel)]="this.mesureDetail.coud " name="coud">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Epaule</label>
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="en cm"
+                                [(ngModel)]="this.mesureDetail.epaule " name="epaule">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Hance</label>
+                            <input type="number" class="form-control" id="inputPassword4" placeholder="en cm"
+                                [(ngModel)]="this.mesureDetail.hance " name="hance">
+                        </div>
+                    </div>
+
+
+                    <footer class="e-fieldset__footer">
+                        <button type="submit" value="" data-toggle="modal" data-target="#exampleModalCenter"
+                            class=" text-white button e-btn--3d -color-primary" (click)="enregistrerMesure()"
+                            data-disable-with="Saving...">enregistrer </button>
+                    </footer>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="col-sm-4">
+            <section class="bg-white color-default -pbxl -rad -shad -ofy-a">
+                <div class="hdr -plm -prm -ptl -pbl -flex -vh-center"><span class="text-uppercase -pan -mrxxs">Votre
+                        commande</span> <span class="-pan"></span></div>
+                <div class="sum brdt -fs-13 -scroll-format">
+
+                    <div class="prod_sum brdb -pts -pbs -plm -prm">
+                        <div class="col-s -mts"><img width="60" height="60" class="lazy image -loaded"
+                                src="{{this.image+ this.commande.idArt}}"
+                                data-src="{{this.image+ this.commande.idArt}}">
+                            </div>
+                        <div class="col-l -mts"><span class="-ellipsis-2" style="padding-left: 15px;">{{this.commande.nom}}</span> <span
+                                class="-mts color-primary"><span dir="ltr" style="padding-left: 15px;"
+                                    data-price="67900">{{this.commande.description}}</span> <span
+                                    data-currency-iso="XOF"></span> </span>
+                            <div class="-mts"><span class="color-default-800" style="padding-left: 15px;">Qté:</span>&nbsp;1</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="osh-resume -mtxl -plm -prm">
+                    <div class="ft-subtotal color-default -pbm price_row "><span class="price_col-desc">Sous-total
+                        </span> <span class="price_col-value"><span dir="ltr"
+                                data-price="208800">{{this.commande.prixUnitaire}} FCFA</span> <span data-currency-iso="XOF">FCFA</span>
+                        </span><span class="price_col-value not_applicable-box -b color-primary -hidden"></span></div>
+                    <div class="cart-rules js-cart-rules ft-price-cart-rules"></div>
+                    <div class="total ft-total brdt -ptl color-default -fwm"> Total <div
+                            class="total-value color-primary -fs-17"><span dir="ltr"
+                                data-price="208800">{{this.commande.prixUnitaire}} FCFA</span> <span data-currency-iso="XOF">FCFA</span>
+                        </div>
+                        <div class="not_applicable-box color-primary -fs-17 -hidden"></div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+    <!-- si la commande est enregistrer -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ttl" id="exampleModalCenterTitle">Commande enregistre </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="fs16">votre commande a été enregistré </div>
+                </div>
+                <div class=" modal-footer ">
+                    <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal"
+                        routerLink="/">poursuivre votre achat</button>
+                    <button type="button" class="btn btn-success ttl espace " (click)="ajouterAuPanier(this.commande)"
+                        data-dismiss="modal">Finaliser votre commande </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

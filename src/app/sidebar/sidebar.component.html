@@ -1,0 +1,194 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="   " id="navbarTogglerDemo02">
+ 
+
+    <div class="_1loc3">
+      <button class="_61rqe XLw0c" type="button" aria-label="Click to collapse">
+        <div class="_1HhXF">
+          <h3 class="_3vvh6">Category</h3>
+          <ul class="_1hmAR">
+            <li class="s8ScO">
+              <div class="_3g6eY _3YFXw">
+                <div class="_1x3ky bFVnA"><span class="wcg2R _1xgM6">Site Templates</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </button>
+      <div class="_1y-cL" >
+        <nav class="_31Giv" >
+          <ul data-test-selector="category-filter" *ngFor = "let categorie of this.listcategories">
+            <li class="_1SXRP active">
+              <a class="_1OYwR fXC7e _2tIrr" href="">
+                <title>Chevron Left</title>
+                
+                
+              </a>
+              <span class="_1kd89">3,960</span>
+            </li>
+
+            <button class="_61rqe XLw0c" type="button" aria-label="Click to collapse" >
+              <div class="_1HhXF" (click)="getCategorie(categorie.name)">
+                <h3 class="_3vvh6" routerLink="/articlebycategorie" > <b>{{categorie.name}}</b> </h3>
+              </div>
+            </button>
+
+
+
+
+            <li class="_1SXRP"  (click)="getSousCategorie(souscategories)" *ngFor= "let souscategories of categorie.typeCategories">
+              <a class="_1OYwR _1Y9yS" routerLink="/articlebycategorie">{{souscategories.name}}</a>
+
+              <span class="_1kd89">663</span>
+            </li>
+            <button class="_61rqe XLw0c" type="button" aria-label="Click to collapse">
+              <div class="_1HhXF">
+                <h3 class="_3vvh6">Tags</h3>
+                <ul class="_1hmAR">
+                  <li class="s8ScO">
+                    <div class="_3g6eY _3YFXw">
+                      <div class="_1x3ky bFVnA">
+                        <span class="wcg2R _1xgM6">Mouride-Authentique-Style</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <title>Chevron Up</title>
+              </div>
+            </button>
+
+            <!-- <li class="_1SXRP" routerLink="/articlebycategorie">
+              <a class="_1OYwR _1Y9yS" routerLink="/articlebycategorie">Touki Ndiareme</a>
+              <span class="_1kd89">136</span>
+            </li>
+
+            <li class="_1SXRP">
+              <a class="_1OYwR _1Y9yS" routerLink="/articlebycategorie">Khaftaane Simple</a>
+              <span class="_1kd89">67</span>
+            </li> -->
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="_1loc3">
+   
+      
+      <!-- <div class="_1y-cL _3pOVV">
+        <div class="_3kFGv">
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP _3IkF1"></span>
+              <span>
+                <b routerLink="/articlebycategorie">accessoires</b>
+                <span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">989</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Makhtoume
+                <span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">579</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Kaalla<span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">520</span>
+          </div>
+
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Chaussure Mbarakiisse<span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">452</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Chaussure nu pied<span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">390</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Chaussure fermee <span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">357</span>
+          </div>
+
+        </div>
+      </div> -->
+      <!-- <span role="button" class="_3eeKY">Show
+        More (24)</span> -->
+    </div>
+
+
+
+<!-- 
+    <div class="_1loc3">
+      <button class="_61rqe XLw0c" type="button" aria-label="Click to collapse">
+        <div class="_1HhXF">
+          <h3 class="_3vvh6" routerLink="/articlebycategorie"> <b>Cafe Touba</b> </h3>
+        </div>
+      </button>
+
+      <div class="_1y-cL">
+        <div class="_3kFGv">
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Cafe Touba Bagdad <span class="_12dTO"></span></span>
+            </a>
+            <span class="_2kkyX">8</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span>
+              <span>Cafe Touba Internationale <span class="_12dTO"></span></span>
+            </a>
+            <span class="_2kkyX">15</span>
+          </div>
+
+          <div class="_3Iuwi">
+            <a class="_3VE_Q" routerLink="/articlebycategorie">
+              <span class="_1HBLP"></span><span>Cafe Toua Nourou Dareyni<span class="_12dTO"></span>
+              </span>
+            </a>
+            <span class="_2kkyX">460</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+
+</nav>

@@ -1,0 +1,174 @@
+
+<section class="container-fluid">
+    <app-menu-admin></app-menu-admin>
+
+</section>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-4">
+            <div _ngcontent-mui-c1="" class="div_bar_search"><br _ngcontent-mui-c1=""><br _ngcontent-mui-c1="">
+                <form _ngcontent-mui-c1="" action="">
+                    <div _ngcontent-mui-c1="" class="div_bar_search_1"><input _ngcontent-mui-c1="" aria-label="search"
+                            autocapitalize="off" autocomplete="off" autocorrect="off" class="Vd9D9"
+                            data-test-selector="autosuggest" name="term"
+                            placeholder="chercher un produit,une marque ou des accessoires"
+                            style="border-radius:2px 0 0 2px" type="search" value=""><button _ngcontent-mui-c1=""
+                            class="_2O-ZB" style="border-radius:0 2px 2px 0"><span _ngcontent-mui-c1=""
+                                class="_2MKh_">Search</span>
+                            <title _ngcontent-mui-c1="">Search</title>
+                        </button></div>
+                </form>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col-sm-3">
+            <app-menu-left-admin></app-menu-left-admin>
+        </div>
+        <br>
+        <div class="col-sm-9">
+            <h2><div>Liste des livraisons</div></h2>
+            <div class="col-sm-8 offset-sm-8"> <button class="add_categorie btn" data-toggle="modal" data-target="#myModalAddCategorie">ajouter une livraison</button></div>
+            <div class="col-sm-12 offset-sm-1 table-responsive">
+                <br><br>
+                    <table class="table table-bordered  table-hover table-responsive col-sm-12">
+                        
+                            <thead class="col-sm-12">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Libelle</th>
+                                <th scope="col">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody class="col-sm-12">
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td class="collapsing"> 
+                                    <button class="btn btn-outline-primary espace">Modifier</button>
+
+                                          <button class="btn btn-outline-danger ">Suprimer</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td class="collapsing"> 
+
+                                    <button class="btn btn-outline-primary espace">Modifier</button>
+
+                                    <button class="btn btn-outline-danger ">Suprimer</button>
+
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td class="collapsing"> 
+
+                                    <button class="btn btn-outline-primary espace">Modifier</button>
+
+                                    <button class="btn btn-outline-danger ">Suprimer</button>
+                                </td>
+                                
+                                
+                              </tr>
+                            </tbody>
+                          </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<!-- 
+    modal pour ajoutez une categorie -->
+
+    <div class="modal fade" id="myModalAddCategorie">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <div>
+                <button type="button" class="close button4" data-dismiss="modal">fermer</button><br>
+            <span class="modal-title" id="part"  ></span>
+            <span class="modal-title Tcolor" id="com">  </span>
+  
+            
+          </div>
+            
+          </div>
+          <br>
+          
+          <!-- Modal body -->
+          
+            <div class="col-md-12 center-block style=float:none; width: 400px;">
+                <h2 class=" text-center cat">Ajoutez une livraison</h2>
+                <form class="border form">
+                    <br>
+        
+                    <!-- <div class="form-group  col-sm-10 offset-sm-1">
+                      <label for="exampleFormControlSelect1">Type</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Habillement</option>
+                        <option>accessoires</option>
+                        <option>Cafe</option>
+                        
+                      </select>
+                    </div> -->
+                    <div class="form-group col-sm-10 offset-sm-1">
+                        <label for="exampleInputPassword1">Date</label>
+                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Nom">
+                    </div>
+                    <div class="form-group col-sm-10 offset-sm-1"> 
+                      <label for="exampleFormControlTextarea1">Etat</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Disponible</option>
+                        <option>non disponible</option>
+                        <option></option>
+                        
+                      </select>
+                    </div>
+                    <div class=" col-sm-12 offset-sm-1 ">
+        
+                        <button type="submit" value=""
+                            class="center col-sm-10 text-white button e-btn--3d -color-primary buttonconnect"><br>
+                            Ajouter
+                        </button>
+                    </div>
+                    <br><br>
+                </form>
+                <br><br>
+            </div>
+        
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success button4" data-dismiss="modal"><span class=" glyphicon glyphicon-ok " id="part"> </span>Annuler</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>

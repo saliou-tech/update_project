@@ -1,0 +1,282 @@
+<app-menu></app-menu>
+<br>
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8 border ">
+
+            <header class="e-fieldset__header -divider-bottom">
+                <div class="e-fieldset__title">
+                    <!-- <h3 class="t-heading -size-s h-m0">
+                        Details du paiement
+                        <div class="alert alert-danger text-center height" *ngIf="this.isnameNotvalid">
+                            <span>Veuillez saisir votre nom</span>
+                        </div>
+                        <div class="alert alert-danger text-center height" *ngIf="this.isnameShort">
+
+                            <span>Veuillez saisir un nom valide</span>
+                        </div>
+                        <div class="alert alert-danger text-center height" *ngIf="this.isprenomNotvalid">
+
+                            <span>Veuillez saisir votre prenom </span>
+                        </div>
+                        <div class="alert alert-danger text-center height" *ngIf="this.isemailNotvalid">
+
+                            <span>Veuillez saisir un email valide</span>
+                        </div>
+                        <div class="alert alert-danger text-center height" *ngIf="this.IsPhoneWritten">
+                                <span> Veuillez Saisir le numéro du téléphone </span>
+                             </div>
+                           
+
+                    </h3> -->
+                    <div class="e-fieldset__subtitle">
+                        <p class="t-body -size-m h-m0">
+
+                        </p>
+
+                    </div>
+                </div>
+            </header>
+            <form class="" >
+                <!-- <div class="form-row">
+
+                    <div class="form-group col-md-6" >
+                        <label for="inputEmail4">Nom</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="nom"
+                            [(ngModel)]="this.clientInfo.nom " name="nom">
+                    </div>
+
+
+                    <div class="form-group col-md-6" [ngClass]="{'error':this.isprenomNotvalid}">
+                        <label for="inputEmail4">Prenom</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="prenom"
+                            [(ngModel)]="this.clientInfo.prenom " name="prenom">
+                    </div>
+                    <div class="form-group col-md-6" [ngClass]="{'error':this.isemailNotvalid}">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email"
+                            [(ngModel)]="this.clientInfo.email " name="email">
+                    </div>
+                    <div class="form-group col-md-6" [ngClass]="{'error':this.IsPhoneWritten}">
+                        <label for="inputPassword4">Telephone</label>
+                        <input type="number" class="form-control" id="inputPassword4" placeholder="+221"
+                            [(ngModel)]="this.clientInfo.telephone " name="telephone">
+                    </div>
+                </div> -->
+                <!-- <div class="form-group" >
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Avenue Blaise diagne"
+                        [(ngModel)]="this.clientInfo.adress" name="adress">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                        [(ngModel)]="this.clientInfo.adress2" name="adress2">
+                </div> -->
+                <!-- <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" [(ngModel)]="this.clientInfo.ville "
+                            name="ville">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Region</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Ville</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                  
+                </div> -->
+                
+                <!-- <footer class="e-fieldset__footer">
+                    <button type="submit" value="" class="button e-btn--3d -color-primary" data-disable-with="Saving..."
+                        (click)="afficherPayment()">enregistrer et continuer</button>
+                </footer> -->
+            </form>
+            <br>
+            <!-- livraison -->
+            <div *ngIf="this.isPayment">
+                <div class="list--item list--item-options -ptxl brdb -pbxl"> 
+                    <input class="osh-radio option" [value]="1"
+                        
+                        type="radio" (click)="showDetailLivraison()" id="customRadioInline1" 
+                        name="paiementCash" [(ngModel)]="this.paiementCash" > 
+                         <label class="-fwm" for="COD_CashOnDelivery" for="customRadioInline1"><span
+                            class="-prm">
+                            <img src="../../assets/img/cash.png"
+                                alt="">
+                            </span>Payez Cash à la livraison </label>
+                    <div class="color-default-800 -fs-13 -plxxxl -mtxs" id="content">
+                        <div class="title "> </div>
+                        <div class="additional-data"></div>
+                        <div class="description">
+                            <h4>Payez pour votre commande à la livraison: </h4>
+                            <ul *ngIf="this.isDetailDescription">
+                                <li> En espèce, soyez certain d'avoir le montant exact du paiement. Nos livreurs ne sont
+                                    pas
+                                    munis de monnaie.</li>
+                            </ul>
+                        </div>
+                        <div class="additional-data"></div>
+                    </div>
+                    <div class="js-grand-total -hidden"><span dir="ltr" data-price="167100"></span> <span
+                            data-currency-iso="XOF">FCFA</span> </div>
+                </div>
+                <!-- orange money -->
+
+                <div class="list--item list--item-options -ptxl -pbxl"> 
+                    <input class="osh-radio option" [value]="1"
+                         
+                     type="radio"  id="customRadioInline2" 
+                        name="this.paiementOrangeMoney"   [(ngModel)]="this.paiementOrangeMoney" (click)="showDescription()"> 
+                        <label class="-fwm" for="customRadioInline2">
+                        <span class="-prm"><img
+                                src="../../assets/img/ompay-ci.png" alt=""></span>Orange
+                        Money</label>
+                    <div class="color-default-800 -fs-13 -plxxxl -mtxs" id="content">
+                        <div class="title"> Pre-payez avec Orange Money </div>
+                        <div class="additional-data "></div>
+                        <div class="description" *ngIf="isDescription"> <br>Payez simplement vos achats avec Orange
+                            Money Sur le numero suivant.
+                            <!-- <br><br>
+                            Vous devez pour cela obtenir un code de paiement:<br>
+                            - Composez le #144#391#<br>
+                            - Entrez votre code secret Orange Money<br>
+                            - Vous recevez ensuite un SMS avec un code de paiement utilisable pendant 15 minutes.<br>
+                            - Conservez ce code. Il vous sera demandé pour régler votre commande par la suite. <br>
+                            - Cliquez pour revenir sur le site Jumia une fois votre paiement terminé, dans le cas
+                            contraire,
+                            votre paiement ne sera pas enregistré.<br> -->
+                        </div>
+                        <div class="additional-data -hidden"></div>
+                    </div>
+                    <div class="js-grand-total -hidden"><span dir="ltr" data-price="167100">167&nbsp;100&nbsp;</span>
+                        <span data-currency-iso="XOF">FCFA</span> </div>
+                </div>
+
+                <!-- prix commande -->
+                <div class="osh-resume -mtxl -plm -prm">
+                    <div class="ft-subtotal color-default -pbm price_row "><span class="price_col-desc">Sous-total
+                        </span>
+                        <span class="price_col-value"><span dir="ltr" data-price="163800"></span> <span
+                                data-currency-iso="XOF">  {{this.commande[0].articleEntity.prixUnitaire}} FCFA</span> </span><span
+                            class="price_col-value not_applicable-box -b color-primary -hidden"></span></div>
+                    <div class="applied-shipping ft-shipping-amount color-default -pbm price_row "><span
+                            class="price_col-desc">Montant de livraison </span> <span class="price_col-value -b "><span
+                                dir="ltr" data-price="3300"></span> <span data-currency-iso="XOF">3300 FCFA</span> </span><span
+                            class="price_col-value not_applicable-box -b color-primary -hidden"></span></div>
+                    <div class="cart-rules js-cart-rules ft-price-cart-rules"></div>
+                    <div class="total ft-total brdt -ptl color-default -fwm"> Total <div
+                            class="total-value color-primary -fs-17"><span dir="ltr" data-price="167100"></span> <span
+                                data-currency-iso="XOF"> {{this.commande[0].articleEntity.prixUnitaire +3300}} FCFA</span>
+                        </div>
+                        <div class="not_applicable-box color-primary -fs-17 -hidden"></div>
+                    </div>
+                    <br>
+                </div>
+
+                <!-- finalisation du commande -->
+
+
+                <footer _ngcontent-ujv-c1="" class="e-fieldset__footer">
+                    <button _ngcontent-ujv-c1=""  (click)="sendNewCommande()" 
+                        class="button e-btn--3d -color-primary" data-disable-with="Saving..." type="submit"
+                        value="">finaliser la commande</button>
+
+                    
+                    </footer>
+
+                <br><br>
+            </div>
+
+
+
+            
+
+        </div>
+        <div class="col-sm-4">
+            <section class="bg-white color-default -pbxl -rad -shad -ofy-a">
+                <div class="hdr -plm -prm -ptl -pbl -flex -vh-center"><span class="text-uppercase -pan -mrxxs">Votre
+                        commande</span> <span class="-pan"> <strong>{{this.commande.length}} </strong>   Commande</span></div>
+                <div class="sum brdt -fs-13 -scroll-format" *ngFor="let macommande of this.commande">
+                    <div class="prod_sum brdb -pts -pbs -plm -prm">
+                        <div class="col-s -mts"><img width="60" height="60" class="lazy image -loaded"
+                            src="{{this.image+ this.macommande.articleEntity.idArt}}"
+                            data-src="{{this.image+ this.macommande.articleEntity.idArt}}"
+                                ></div>
+                        <div class="col-l -mts"><span class="-ellipsis-2" style="padding-left: 15px;">{{this.commande[0].articleEntity.nom}}</span> <span class="-mts color-primary"><span dir="ltr"
+                                    data-price="132900"></span> <span
+                                    data-currency-iso="XOF"></span> </span>
+                            <div  style="padding-left: 15px;" class="-mts"><span  class="color-default-800" ></span> <br> quantite:  {{macommande.quantite}}</div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="osh-resume -mtxl -plm -prm">
+                    <div class="ft-subtotal color-default -pbm price_row "><span class="price_col-desc">Sous-total
+                        </span> <span class="price_col-value">{{this.commande[0].articleEntity.prixUnitaire}}<span dir="ltr"
+                                data-price="208800"></span> <span data-currency-iso="XOF"></span>
+                        </span><span class="price_col-value not_applicable-box -b color-primary -hidden"></span></div>
+                    <div class="cart-rules js-cart-rules ft-price-cart-rules"></div>
+                    <div class="total ft-total brdt -ptl color-default -fwm"> Total <div
+                            class="total-value color-primary -fs-17"><span dir="ltr"
+                                data-price="208800"></span> {{this.commande[0].articleEntity.prixUnitaire}} <span data-currency-iso="XOF">FCFA</span>
+                        </div>
+                        <div class="not_applicable-box color-primary -fs-17 -hidden"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+</section>
+
+
+<div *ngIf="iscommande_valide" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title ttl text-success" id="exampleModalCenterTitle">Commande enregistrée </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/" >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="fs16">merci <strong class="text-success"> {{this.client.data.currentUser.username}}</strong >, votre commande a  été bien enregistree  ,il vous sera livrée le <strong class="text-success">{{this.commande[0].NouveauModel.dateLivraison}} </strong> </div>
+            </div>
+            <div class=" modal-footer ">
+              <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je continue mes achats</button>
+              <button type="button" class="btn btn-success ttl espace "  data-dismiss="modal" routerLink="/">quitter </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- si le mode de paiement n'est pas choisies  -->
+      <div *ngIf="this.ispaiement"  class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title ttl text-danger" id="exampleModalCenterTitle">Choissisez le mode paiement</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="fs16">merci <strong class="text-success"> {{this.client.data.currentUser.nom}}</strong>, Veuillez choisir d'abord le mode de paiment  avant de finaliser votre commmande</div>
+            </div>
+            <div class=" modal-footer ">
+              <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je continue mes achats</button>
+              <button type="button" class="btn btn-success ttl espace "  data-dismiss="modal" > ok </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+
+
+<br><br>
+<app-footer></app-footer>

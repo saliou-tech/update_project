@@ -1,0 +1,90 @@
+<app-menu></app-menu>
+<section class="container">
+    <div class="row">
+        <div class="col-sm-12  ">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8 offset-sm-3">
+                <div _ngcontent-mui-c1="" class="div_bar_search"><br _ngcontent-mui-c1=""><br _ngcontent-mui-c1="">
+                    <form _ngcontent-mui-c1="" action="">
+                        <div _ngcontent-mui-c1="" class="div_bar_search_1"><input _ngcontent-mui-c1=""
+                                aria-label="search" autocapitalize="off" autocomplete="off" autocorrect="off"
+                                class="Vd9D9" data-test-selector="autosuggest" name="term"
+                                placeholder="chercher un produit,une marque ou des accessoires"
+                                style="border-radius:2px 0 0 2px" type="search" value=""><button _ngcontent-mui-c1=""
+                                class="_2O-ZB" style="border-radius:0 2px 2px 0"><span _ngcontent-mui-c1=""
+                                    class="_2MKh_">Search</span>
+                                <title _ngcontent-mui-c1="">Search</title>
+                            </button></div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12 ">
+            <nav class="osh-breadcrumb">
+                <ul>
+         
+                    <!-- <li class="" ><a href="#" title="Télévisions" class="text-dark">Télévisions</a></li>
+                    <li class="last-child"><a href="#" title="TV LED &amp; LCD" class="text-dark">TV LED &amp;
+                            LCD</a></li> -->
+                    <!-- <li class="osh-breadcrumb-search"><input id="bcSearchInput"
+                            placeholder="Chercher dans TV LED &amp; LCD"><i class="osh-font-magnifier"></i></li> -->
+                </ul>
+                <div class="hidden" id="active-segments-roots" data-active-segment="" data-active-root=""></div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 ">
+            
+            <!-- areet -->
+            <app-sidebar></app-sidebar>
+        </div>
+        
+        <div class="col-sm-9  products -mabaya _1o7LM" >
+            <div *ngFor="let article of  this.lastlistarticles;let i=index">
+                <div class="sku -gallery _1o7LM " data-sku="LG178EL1IQF6ONAFAMZ" > 
+                    <a class="link" *ngFor="let articles of article;let j= index"
+                         >
+                        <!-- <div class="top"></div>
+                        <div class="top"></div> -->
+                        <div class="image-wrapper default-state">
+                            <img class="lazy image -loaded" (click)="articleView(articles)"
+                                
+                                data-image-vertical="1" width="220" height="220"
+                                src="{{this.image + articles.idArt}}"
+                                data-sku="LG178EL1IQF6ONAFAMZ"
+                                data-src="{{this.image + articles.idArt}}"
+                                data-placeholder="placeholder_m_1.jpg">
+                                <noscript>
+                                    <img
+                                    src="{{this.image + articles.idArt}}" (click)="articleView(articles)"
+                                    width="220" height="220" class="image">
+                                </noscript></div>
+                        <h2 class="title"><span class="brand ">LG&nbsp;</span> <span class="name" dir="ltr">{{articles.nom}}</span></h2>
+                        <div class="price-container clearfix"><span class="sale-flag-percent"></span> <span
+                                class="price-box ri"> <span class="price "><span dir="ltr"
+                                        data-price="2271505"></span> <span
+                                        data-currency-iso="XOF"></span> </span> <span class=" "><span
+                                        dir="ltr" data-price="2746250"></span> <span
+                                        data-currency-iso="XOF"> {{articles.prixUnitaire}} FCFA</span> </span> </span></div>
+                        <!-- <div class="list -sizes" data-selected-sku=""></div> -->
+                        <div class="btn-group" role="group">
+                        <button class="btn text-white dimension " (click)="articleCommandeView(articles)">acheter</button>
+                        <button  *ngIf = "this.isHabillements"class="btn   _3tfm8 _3uUpH _3tfm8 lpgPF" (click)="articleClientView(articles)">commander</button>
+                    </div> 
+                    </a>
+                </div>
+
+                
+
+        </div>
+    </div>
+    </div>
+
+</section>
+<app-footer></app-footer>

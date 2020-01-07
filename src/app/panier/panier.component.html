@@ -1,0 +1,167 @@
+<app-menu></app-menu>
+
+<br>
+<section class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1 ">
+            <div class="cart-header">
+
+                <span class="cart-header__left">
+
+                    <a class="btn btn-primary text-white" role="button" routerLink = "/">Continue Shopping</a>
+                </span>
+
+
+                <!-- <span class="cart-header__right">
+
+                    <a class="btn1 btn-primary text-white" role="button">vider le panier</a>
+                </span> -->
+
+            </div>
+            <br>
+            <div class="header col-md-12">
+                <div class="item">Article</div>
+                <div class="col-md-5"></div>
+                <div class="quantity">Quantité</div>
+                <div class="col-md-1"> </div>
+                <div class="unit-price">Prix unitaire</div>
+                <div class="col-md-1"> </div>
+                <div class="subtotal">Sous-total </div>
+            </div>
+           <br><hr>
+            <form class="product ft-product row"  *ngFor="let panier of this.monpanier;let i=index">
+             
+                <div class="ln " >
+                    <div class="image ft-product-image col-md-2 "><a ><img class="lazy image -loaded" width="60"
+                                height="60"
+                                src="{{this.image+ panier.articleEntity.idArt}"
+                                data-src="{{this.image+ this.panier.articleEntity.idArt}}"
+                                alt="Polo Design Wakanda - Manches Courtes - Noir"
+                                title="Polo Design Wakanda - Manches Courtes - Noir"
+                                data-placeholder="placeholder_xs_1.jpg"></a></div>
+
+                </div>
+
+                <!-- <div class="col-md-6"></div> -->
+                <div class="item col-md-5">
+                    <div class="seller -mbs ft-product-seller " ft-data-seller="">{{panier.articleEntity.nom}}</div>
+                    <!-- <a
+                        class="name -mbs -inline-block ft-product-name ">{{panier.articleEntity.description}}
+                    </a> -->
+                    <div class="size -mbm ft-product-size " ft-data-size="L"></div>
+                    <div class="acts"><a
+            
+                            class="osh-btn -link -mrxxxl"> <i class=" osh-font-fav-outline"></i> <span
+                                class="label ">Mettre de côté</span> </a> <a class="osh-btn -link js-remove"
+                            ><i
+                                class="osh-font-trash"></i> <span class="label" (click)="deleteItem(i)"><i class="far fa-trash-alt"></i>
+                                Supprimer</span></a></div>
+                </div>
+                <div class="col-md-1">
+                    <div class="quantity">
+                        <div id="GE944FA1CO7MONAFAMZ-287632_5d9b0c84e595a-qty"
+                            class="osh-dropdown -select-box ft-product-quantity -default">
+                            <div class="toggle">
+                                <div class=" -select-box ft-product-quantity" data-js-event="click"
+                                    data-sku="GE944FA1CO7MONAFAMZ-287632"
+                                    data-js-element="#GE944FA1CO7MONAFAMZ-287632_5d9b0c84e595a-qty"
+                                    data-js-item-element=".list-item"> <span class="label "></span> <span
+                                        class="sub-label ">{{panier.quantite}}</span> <i class="caret osh-font-light-arrow-down"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="unit-price ft-product-unit-price"><span class="current"><span dir="ltr"
+                                data-price="9000">{{panier.prix |currency}}   </span> <span data-currency-iso="XOF">FCFA</span>
+                        </span> </div>
+                </div>
+                <div class="col-md">
+                    <div class="unit-price ft-product-unit-price"><span class="current"><span dir="ltr"
+                                data-price="9000">{{panier.price |currency}} </span> <span data-currency-iso="XOF">FCFA</span>
+                        </span> </div>
+                </div>
+                 
+            </form>
+            
+            
+            
+           
+          
+            <div class="resume -mtxxl -mbxs">
+
+                <div class="row total ft-total"><label>Total :</label>
+                    <div class="ft-total-panel"><span dir="ltr" data-price="9000">{{this.totalPrix | currency}}</span> <span
+                            data-currency-iso="XOF">FCFA</span> </div>
+                </div>
+                <div class="shipping -mrxxl -mbm">Frais de livraison non inclus pour le moment</div>
+                <br>
+                <hr>
+                
+                <div class="col-sm-12">
+                    <button class="btn btn-primary espace" routerLink = "/">poursuivre vos achats </button>
+                    
+                    <button class="btn btn-primary" (click)= "finaliser()" *ngIf="this.isClientExist" data-toggle="modal"
+                    data-target="#exampleModalCenter2">finaliser votre commande  </button>
+                    <button class="btn btn-primary" (click)= "finaliser()" data-toggle="modal"
+                    data-target="#exampleModalCenter" *ngIf="!this.isClientExist">finaliser votre commande  </button>
+
+                </div>
+                <br><br><br>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title ttl" id="exampleModalCenterTitle">Salut cher Client </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="fs16">Veuillez vous authentifier avant de valider votre commande</div>
+                </div>
+                <div class=" modal-footer ">
+                  <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je continue mes achats</button>
+                  <button type="button" class="btn btn-success ttl espace " routerLink="/loginUser" data-dismiss="modal">Je m'authentifie </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- 
+          si la commande est enregistre -->
+
+          <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title ttl" id="exampleModalCenterTitle">Salut cher Client </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="fs16">Votre commande est prise en compte veuillez passez au paiement</div>
+                    </div>
+                    <div class=" modal-footer ">
+                      <button type="button" class="btn btn-primary espace  ttl " data-dismiss="modal" routerLink="/"> Je continue mes achats</button>
+                      <button type="button" class="btn btn-success ttl espace " routerLink="/client" data-dismiss="modal">Je passe au paiement </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+</section>
+<app-footer></app-footer>
